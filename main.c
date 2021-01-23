@@ -1,18 +1,10 @@
-// Created by Nirina Gallot on 23/01/2021.
-//joined by Michael TALLA on 23/01/2021
+// Created by Nirina GALLOT on 23/01/2021.
+//joined by Michael TALLA on 23/01/2021.
 // Malloc-Fantasy
 #include <stdio.h>
 #include <mysql.h>
-
-
-
-
-
+#include <stdio.h>
 int main(int argc, char** argv){
 MYSQL *connexion = mysql_init(NULL);
-    if(connexion== NULL){
-        printf('failed...');
-    }   else{
-        printf('success');
-    }
+    printf(connexion == NULL ? 'failed...' : 'success');
 }
