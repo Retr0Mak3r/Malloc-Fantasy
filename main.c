@@ -3,7 +3,6 @@
 // Malloc-Fantasy
 #include <stdio.h>
 #include <mysql.h>
-#include <stdio.h>
 int main(int argc, char** argv){
 MYSQL *connexion = mysql_init(NULL);
     printf(connexion == NULL ? 'failed...' : 'success');
