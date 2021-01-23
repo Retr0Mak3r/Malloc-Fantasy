@@ -11,7 +11,7 @@
 int main(int argc, char** argv){
 MYSQL *connexion = mysql_init(NULL);
     if(connexion== NULL){
-        printf('failed');
+        printf('failed...');
     }   else{
         printf('success');
     }
