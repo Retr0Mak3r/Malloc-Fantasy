@@ -26,24 +26,24 @@ The C compiler identification is MSVC, found in "C:/Users/mai_k/CLionProjects/Ma
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/Users/mai_k/CLionProjects/Malloc-Fantasy/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_bdc58\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29333\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_bdc58.dir\build.make /nologo -L                  CMakeFiles\cmTC_bdc58.dir\build
-Building C object CMakeFiles/cmTC_bdc58.dir/testCCompiler.c.obj
-	C:\PROGRA~2\MICROS~3\2019\BUILDT~1\VC\Tools\MSVC\1428~1.293\bin\Hostx64\x64\cl.exe @C:\Users\mai_k\AppData\Local\Temp\nmA22D.tmp
+Run Build Command(s):nmake /nologo cmTC_19ebf\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29333\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_19ebf.dir\build.make /nologo -L                  CMakeFiles\cmTC_19ebf.dir\build
+Building C object CMakeFiles/cmTC_19ebf.dir/testCCompiler.c.obj
+	C:\PROGRA~2\MICROS~3\2019\BUILDT~1\VC\Tools\MSVC\1428~1.293\bin\Hostx64\x64\cl.exe @C:\Users\mai_k\AppData\Local\Temp\nmF22D.tmp
 testCCompiler.c
-Linking C executable cmTC_bdc58.exe
-	"C:\Program Files\JetBrains\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_bdc58.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~3\2019\BUILDT~1\VC\Tools\MSVC\1428~1.293\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_bdc58.dir\objects1.rsp @C:\Users\mai_k\AppData\Local\Temp\nmA25C.tmp
+Linking C executable cmTC_19ebf.exe
+	"C:\Program Files\JetBrains\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_19ebf.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~3\2019\BUILDT~1\VC\Tools\MSVC\1428~1.293\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_19ebf.dir\objects1.rsp @C:\Users\mai_k\AppData\Local\Temp\nmF367.tmp
 
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/mai_k/CLionProjects/Malloc-Fantasy/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_0610c\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29333\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_0610c.dir\build.make /nologo -L                  CMakeFiles\cmTC_0610c.dir\build
-Building C object CMakeFiles/cmTC_0610c.dir/CMakeCCompilerABI.c.obj
-	C:\PROGRA~2\MICROS~3\2019\BUILDT~1\VC\Tools\MSVC\1428~1.293\bin\Hostx64\x64\cl.exe @C:\Users\mai_k\AppData\Local\Temp\nmA365.tmp
+Run Build Command(s):nmake /nologo cmTC_5d095\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29333\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_5d095.dir\build.make /nologo -L                  CMakeFiles\cmTC_5d095.dir\build
+Building C object CMakeFiles/cmTC_5d095.dir/CMakeCCompilerABI.c.obj
+	C:\PROGRA~2\MICROS~3\2019\BUILDT~1\VC\Tools\MSVC\1428~1.293\bin\Hostx64\x64\cl.exe @C:\Users\mai_k\AppData\Local\Temp\nmF46F.tmp
 CMakeCCompilerABI.c
-Linking C executable cmTC_0610c.exe
-	"C:\Program Files\JetBrains\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_0610c.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~3\2019\BUILDT~1\VC\Tools\MSVC\1428~1.293\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_0610c.dir\objects1.rsp @C:\Users\mai_k\AppData\Local\Temp\nmA395.tmp
+Linking C executable cmTC_5d095.exe
+	"C:\Program Files\JetBrains\CLion 2020.3.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_5d095.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x64\mt.exe --manifests  -- C:\PROGRA~2\MICROS~3\2019\BUILDT~1\VC\Tools\MSVC\1428~1.293\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_5d095.dir\objects1.rsp @C:\Users\mai_k\AppData\Local\Temp\nmF49F.tmp
 
 
 
