@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/gallo_umchrss/Desktop/projets/projet C
+# Install script for directory: C:/Users/mai_k/CLionProjects/Malloc-Fantasy
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/projet_C")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Malloc-Fantasy")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/gallo_umchrss/Desktop/projets/projet C/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
