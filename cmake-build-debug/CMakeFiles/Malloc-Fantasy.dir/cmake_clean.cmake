@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "../bin/Malloc-Fantasy.exe.manifest"
   "../bin/Malloc-Fantasy.pdb"
   "CMakeFiles/Malloc-Fantasy.dir/main.c.obj"
-  "Malloc-Fantasy.lib"
+  "libMalloc-Fantasy.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

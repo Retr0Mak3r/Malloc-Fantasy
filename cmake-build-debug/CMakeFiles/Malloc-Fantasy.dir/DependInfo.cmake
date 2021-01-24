@@ -4,13 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/main.c" "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/cmake-build-debug/CMakeFiles/Malloc-Fantasy.dir/main.c.obj"
+  "C:/Users/gallo_umchrss/Desktop/projets/projet C/main.c" "C:/Users/gallo_umchrss/Desktop/projets/projet C/cmake-build-debug/CMakeFiles/Malloc-Fantasy.dir/main.c.obj"
   )
-set(CMAKE_C_COMPILER_ID "MSVC")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../Mysql/include"
+  "C:/msys64/mingw64/bin/../include/SDL2"
   )
 
 # Targets to which this target links.
