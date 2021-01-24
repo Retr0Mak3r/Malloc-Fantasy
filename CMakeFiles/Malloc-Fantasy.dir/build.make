@@ -61,10 +61,10 @@ RM = C:\msys64\mingw64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\mai_k\CLionProjects\Malloc-Fantasy
+CMAKE_SOURCE_DIR = "C:\Users\gallo_umchrss\Desktop\projets\projet C"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\mai_k\CLionProjects\Malloc-Fantasy
+CMAKE_BINARY_DIR = "C:\Users\gallo_umchrss\Desktop\projets\projet C"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Malloc-Fantasy.dir/depend.make
@@ -78,72 +78,72 @@ include CMakeFiles/Malloc-Fantasy.dir/flags.make
 CMakeFiles/Malloc-Fantasy.dir/main.c.obj: CMakeFiles/Malloc-Fantasy.dir/flags.make
 CMakeFiles/Malloc-Fantasy.dir/main.c.obj: CMakeFiles/Malloc-Fantasy.dir/includes_C.rsp
 CMakeFiles/Malloc-Fantasy.dir/main.c.obj: main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mai_k\CLionProjects\Malloc-Fantasy\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Malloc-Fantasy.dir/main.c.obj"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Malloc-Fantasy.dir\main.c.obj -c C:\Users\mai_k\CLionProjects\Malloc-Fantasy\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\gallo_umchrss\Desktop\projets\projet C\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Malloc-Fantasy.dir/main.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Malloc-Fantasy.dir\main.c.obj -c "C:\Users\gallo_umchrss\Desktop\projets\projet C\main.c"
 
 CMakeFiles/Malloc-Fantasy.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Malloc-Fantasy.dir/main.c.i"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\mai_k\CLionProjects\Malloc-Fantasy\main.c > CMakeFiles\Malloc-Fantasy.dir\main.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\gallo_umchrss\Desktop\projets\projet C\main.c" > CMakeFiles\Malloc-Fantasy.dir\main.c.i
 
 CMakeFiles/Malloc-Fantasy.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Malloc-Fantasy.dir/main.c.s"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\mai_k\CLionProjects\Malloc-Fantasy\main.c -o CMakeFiles\Malloc-Fantasy.dir\main.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\gallo_umchrss\Desktop\projets\projet C\main.c" -o CMakeFiles\Malloc-Fantasy.dir\main.c.s
 
 CMakeFiles/Malloc-Fantasy.dir/Sources/init.c.obj: CMakeFiles/Malloc-Fantasy.dir/flags.make
 CMakeFiles/Malloc-Fantasy.dir/Sources/init.c.obj: CMakeFiles/Malloc-Fantasy.dir/includes_C.rsp
 CMakeFiles/Malloc-Fantasy.dir/Sources/init.c.obj: Sources/init.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mai_k\CLionProjects\Malloc-Fantasy\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Malloc-Fantasy.dir/Sources/init.c.obj"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Malloc-Fantasy.dir\Sources\init.c.obj -c C:\Users\mai_k\CLionProjects\Malloc-Fantasy\Sources\init.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\gallo_umchrss\Desktop\projets\projet C\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Malloc-Fantasy.dir/Sources/init.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Malloc-Fantasy.dir\Sources\init.c.obj -c "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\init.c"
 
 CMakeFiles/Malloc-Fantasy.dir/Sources/init.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Malloc-Fantasy.dir/Sources/init.c.i"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\mai_k\CLionProjects\Malloc-Fantasy\Sources\init.c > CMakeFiles\Malloc-Fantasy.dir\Sources\init.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\init.c" > CMakeFiles\Malloc-Fantasy.dir\Sources\init.c.i
 
 CMakeFiles/Malloc-Fantasy.dir/Sources/init.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Malloc-Fantasy.dir/Sources/init.c.s"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\mai_k\CLionProjects\Malloc-Fantasy\Sources\init.c -o CMakeFiles\Malloc-Fantasy.dir\Sources\init.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\init.c" -o CMakeFiles\Malloc-Fantasy.dir\Sources\init.c.s
 
 CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj: CMakeFiles/Malloc-Fantasy.dir/flags.make
 CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj: CMakeFiles/Malloc-Fantasy.dir/includes_C.rsp
 CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj: Sources/draw.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mai_k\CLionProjects\Malloc-Fantasy\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Malloc-Fantasy.dir\Sources\draw.c.obj -c C:\Users\mai_k\CLionProjects\Malloc-Fantasy\Sources\draw.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\gallo_umchrss\Desktop\projets\projet C\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Malloc-Fantasy.dir\Sources\draw.c.obj -c "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\draw.c"
 
 CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.i"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\mai_k\CLionProjects\Malloc-Fantasy\Sources\draw.c > CMakeFiles\Malloc-Fantasy.dir\Sources\draw.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\draw.c" > CMakeFiles\Malloc-Fantasy.dir\Sources\draw.c.i
 
 CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.s"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\mai_k\CLionProjects\Malloc-Fantasy\Sources\draw.c -o CMakeFiles\Malloc-Fantasy.dir\Sources\draw.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\draw.c" -o CMakeFiles\Malloc-Fantasy.dir\Sources\draw.c.s
 
 CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.obj: CMakeFiles/Malloc-Fantasy.dir/flags.make
 CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.obj: CMakeFiles/Malloc-Fantasy.dir/includes_C.rsp
 CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.obj: Sources/input.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mai_k\CLionProjects\Malloc-Fantasy\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.obj"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Malloc-Fantasy.dir\Sources\input.c.obj -c C:\Users\mai_k\CLionProjects\Malloc-Fantasy\Sources\input.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\gallo_umchrss\Desktop\projets\projet C\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Malloc-Fantasy.dir\Sources\input.c.obj -c "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\input.c"
 
 CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.i"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\mai_k\CLionProjects\Malloc-Fantasy\Sources\input.c > CMakeFiles\Malloc-Fantasy.dir\Sources\input.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\input.c" > CMakeFiles\Malloc-Fantasy.dir\Sources\input.c.i
 
 CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.s"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\mai_k\CLionProjects\Malloc-Fantasy\Sources\input.c -o CMakeFiles\Malloc-Fantasy.dir\Sources\input.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\input.c" -o CMakeFiles\Malloc-Fantasy.dir\Sources\input.c.s
 
 CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.obj: CMakeFiles/Malloc-Fantasy.dir/flags.make
 CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.obj: CMakeFiles/Malloc-Fantasy.dir/includes_C.rsp
 CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.obj: Sources/map.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\mai_k\CLionProjects\Malloc-Fantasy\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.obj"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Malloc-Fantasy.dir\Sources\map.c.obj -c C:\Users\mai_k\CLionProjects\Malloc-Fantasy\Sources\map.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\gallo_umchrss\Desktop\projets\projet C\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Malloc-Fantasy.dir\Sources\map.c.obj -c "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\map.c"
 
 CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.i"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\mai_k\CLionProjects\Malloc-Fantasy\Sources\map.c > CMakeFiles\Malloc-Fantasy.dir\Sources\map.c.i
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\map.c" > CMakeFiles\Malloc-Fantasy.dir\Sources\map.c.i
 
 CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.s"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\mai_k\CLionProjects\Malloc-Fantasy\Sources\map.c -o CMakeFiles\Malloc-Fantasy.dir\Sources\map.c.s
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\map.c" -o CMakeFiles\Malloc-Fantasy.dir\Sources\map.c.s
 
 # Object files for target Malloc-Fantasy
 Malloc__Fantasy_OBJECTS = \
@@ -165,7 +165,7 @@ bin/Malloc-Fantasy.exe: CMakeFiles/Malloc-Fantasy.dir/build.make
 bin/Malloc-Fantasy.exe: CMakeFiles/Malloc-Fantasy.dir/linklibs.rsp
 bin/Malloc-Fantasy.exe: CMakeFiles/Malloc-Fantasy.dir/objects1.rsp
 bin/Malloc-Fantasy.exe: CMakeFiles/Malloc-Fantasy.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\mai_k\CLionProjects\Malloc-Fantasy\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable bin\Malloc-Fantasy.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\gallo_umchrss\Desktop\projets\projet C\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable bin\Malloc-Fantasy.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Malloc-Fantasy.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -178,6 +178,6 @@ CMakeFiles/Malloc-Fantasy.dir/clean:
 .PHONY : CMakeFiles/Malloc-Fantasy.dir/clean
 
 CMakeFiles/Malloc-Fantasy.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\mai_k\CLionProjects\Malloc-Fantasy C:\Users\mai_k\CLionProjects\Malloc-Fantasy C:\Users\mai_k\CLionProjects\Malloc-Fantasy C:\Users\mai_k\CLionProjects\Malloc-Fantasy C:\Users\mai_k\CLionProjects\Malloc-Fantasy\CMakeFiles\Malloc-Fantasy.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\gallo_umchrss\Desktop\projets\projet C" "C:\Users\gallo_umchrss\Desktop\projets\projet C" "C:\Users\gallo_umchrss\Desktop\projets\projet C" "C:\Users\gallo_umchrss\Desktop\projets\projet C" "C:\Users\gallo_umchrss\Desktop\projets\projet C\CMakeFiles\Malloc-Fantasy.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Malloc-Fantasy.dir/depend
 

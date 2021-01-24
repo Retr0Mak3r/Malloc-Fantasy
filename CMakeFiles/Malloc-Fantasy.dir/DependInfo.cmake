@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Sources/draw.c" "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj"
-  "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Sources/init.c" "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/CMakeFiles/Malloc-Fantasy.dir/Sources/init.c.obj"
-  "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Sources/input.c" "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.obj"
-  "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Sources/map.c" "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.obj"
-  "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/main.c" "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/CMakeFiles/Malloc-Fantasy.dir/main.c.obj"
+  "C:/Users/gallo_umchrss/Desktop/projets/projet C/Sources/draw.c" "C:/Users/gallo_umchrss/Desktop/projets/projet C/CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj"
+  "C:/Users/gallo_umchrss/Desktop/projets/projet C/Sources/init.c" "C:/Users/gallo_umchrss/Desktop/projets/projet C/CMakeFiles/Malloc-Fantasy.dir/Sources/init.c.obj"
+  "C:/Users/gallo_umchrss/Desktop/projets/projet C/Sources/input.c" "C:/Users/gallo_umchrss/Desktop/projets/projet C/CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.obj"
+  "C:/Users/gallo_umchrss/Desktop/projets/projet C/Sources/map.c" "C:/Users/gallo_umchrss/Desktop/projets/projet C/CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.obj"
+  "C:/Users/gallo_umchrss/Desktop/projets/projet C/main.c" "C:/Users/gallo_umchrss/Desktop/projets/projet C/CMakeFiles/Malloc-Fantasy.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
