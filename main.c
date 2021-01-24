@@ -10,14 +10,39 @@
  *        Created the 10 December 2020     *
  ***************************************** */
 
-#include <stdio.h>
-#include <mysql.h>
-#include <SDL.h>
-#include <conio.h>
+
+#include "Headers/prototype.h"
+
+/* Variables uses during the game */
+Input input;
 
 int main(int argc,char** argv)
 {
-    SDL_Init(SDL_VIDEO_DRIVER_WINDOWS);
+    unsigned int frameLimit = SDL_GetTicks() + 16;
+    int start;
+
+    // Initialisation de la SDL
+    init("Malloc Fantasy -v1-");
+
+    // cleanup at the end
+    atexit(cleanup);
+
+    start=1;
+
+    // gameLoop
+    while(start==1)
+    {
+        //keyboard input
+        gestionInputs(&input);
+
+        //renderer
+        drawGame();
+
+        // Gestion des 60 fps (1000ms/60 = 16.6 -> 16
+        delay(frameLimit);
+        frameLimit = SDL_GetTicks() + 16;
+    }
+
     MYSQL *connexion = mysql_init(NULL);
     if(connexion== NULL)
     {
@@ -27,6 +52,5 @@ int main(int argc,char** argv)
         printf("success");
     }
     getch();
-    SDL_Quit();
     return 0;
 }
