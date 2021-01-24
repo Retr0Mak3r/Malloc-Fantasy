@@ -24,6 +24,9 @@ int main(int argc,char** argv)
     // Initialisation de la SDL
     init("Malloc Fantasy -v1-");
 
+    // Loading ressource
+    loadGame();
+
     // cleanup at the end
     atexit(cleanup);
 
