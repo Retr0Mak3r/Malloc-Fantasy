@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/gallo_umchrss/Desktop/projets/projet C/main.c" "C:/Users/gallo_umchrss/Desktop/projets/projet C/cmake-build-debug/CMakeFiles/Malloc-Fantasy.dir/main.c.obj"
+  "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/main.c" "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/cmake-build-debug/CMakeFiles/Malloc-Fantasy.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
