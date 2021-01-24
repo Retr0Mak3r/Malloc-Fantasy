@@ -23,5 +23,4 @@ void cleanMaps(void)
         SDL_DestroyTexture(map.background);
         map.background = NULL;
     }
-
 }
