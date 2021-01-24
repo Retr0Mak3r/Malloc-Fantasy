@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include <mysql.h>
 #include <SDL.h>
+#include <conio.h>
 
 int main(int argc,char** argv){
     SDL_Init(SDL_VIDEO_DRIVER_WINDOWS);
