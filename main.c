@@ -19,7 +19,7 @@ Input input;
 int main(int argc,char** argv)
 {
     unsigned int frameLimit = SDL_GetTicks() + 16;
-    int start;
+    int go;
 
     // Initialisation de la SDL
     init("Malloc Fantasy -v1-");
@@ -27,10 +27,10 @@ int main(int argc,char** argv)
     // cleanup at the end
     atexit(cleanup);
 
-    start=1;
+    go=1;
 
     // gameLoop
-    while(start==1)
+    while(go==1)
     {
         //keyboard input
         gestionInputs(&input);
@@ -51,6 +51,5 @@ int main(int argc,char** argv)
     {
         printf("success");
     }
-    getch();
-    return 0;
+    exit(0);
 }

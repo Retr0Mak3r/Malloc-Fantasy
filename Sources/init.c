@@ -13,19 +13,13 @@ SDL_Renderer *getrenderer(void)
 
 void init(char *title)
 {
-    /* On crée la fenêtre, représentée par le pointeur jeu.window en utilisant la largeur et la
-    hauteur définies dans les defines (defs.h).
-    Nouveautés SDL2 : on peut centrer la fenêtre avec SDL_WINDOWPOS_CENTERED, et choisir la taille
-    de la fenêtre, pour que la carte graphique l'agrandisse automatiquement. Notez aussi qu'on peut
-    maintenant créer plusieurs fenêtres. */
-
     screen = SDL_CreateWindow(title,
                               SDL_WINDOWPOS_CENTERED,
                               SDL_WINDOWPOS_CENTERED,
                               SCREEN_WIDTH, SCREEN_HEIGHT,
                               SDL_WINDOW_SHOWN);
 
-    //On crée un renderer pour la SDL et on active la synchro verticale : VSYNC
+
     renderer = SDL_CreateRenderer(screen, -1, SDL_RENDERER_PRESENTVSYNC);
 
     // Si on n'y arrive pas, on quitte en enregistrant l'erreur dans stdout.txt
