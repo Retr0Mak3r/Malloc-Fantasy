@@ -15,14 +15,18 @@
 #include <SDL.h>
 #include <conio.h>
 
-int main(int argc,char** argv){
+int main(int argc,char** argv)
+{
     SDL_Init(SDL_VIDEO_DRIVER_WINDOWS);
-MYSQL *connexion = mysql_init(NULL);
-    if(connexion== NULL){
-    printf("failed...");
-    }   else{
-    printf("success");
+    MYSQL *connexion = mysql_init(NULL);
+    if(connexion== NULL)
+    {
+        printf("failed...");
+    }else
+    {
+        printf("success");
     }
+    getch();
     SDL_Quit();
     return 0;
 }
