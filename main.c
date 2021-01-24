@@ -1,6 +1,15 @@
-// Created by Nirina Gallot on 23/01/2021.
-//joined by Michael TALLA on 23/01/2021
-// Malloc-Fantasy
+/* *****************************************
+ *                Project_C                *
+ *       And now, it's time to C code !    *
+ * Game Name : Malloc_Fantasy              *
+ * Player 1  : GALLOT Nirina               *
+ * Player 2  : TALLA Michael               *
+ * Groupe 2                                *
+ * Classe 2A3                              *
+ *                                         *
+ *        Created the 10 December 2020     *
+ ***************************************** */
+
 #include <stdio.h>
 #include <mysql.h>
 #include <SDL.h>
