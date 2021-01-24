@@ -10,8 +10,14 @@ target_link_directories(Malloc-Fantasy PUBLIC ${CMAKE_SOURCE_DIR}/Mysql/lib)
 target_include_directories(Malloc-Fantasy PUBLIC ${CMAKE_SOURCE_DIR}/Mysql/include)
 
 
-target_link_libraries(Malloc-Fantasy mysql)
+target_link_libraries(Malloc-Fantasy -lmysql)
 
 set_target_properties(Malloc-Fantasy PROPERTIES
 RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin"
 OUTPUT_NAME Malloc-Fantasy)
+INCLUDE(FindPkgConfig)
+pkg_check_modules(SDL2 REQUIRED sdl2)
+include_directories(${SDL2_INCLUDE_DIRS})
+link_directories (${SDL2_LIBRARY_DIRS})
+target_link_libraries (Malloc-Fantasy ${SDL2_LIBRARIES})
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(SDL2 REQUIRED_VARS SDL2_LIBRARY SDL2_INCLUDE_DIR)
