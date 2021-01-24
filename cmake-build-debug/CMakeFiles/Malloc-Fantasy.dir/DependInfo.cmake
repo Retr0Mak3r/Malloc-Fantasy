@@ -6,7 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/main.c" "C:/Users/mai_k/CLionProjects/Malloc-Fantasy/cmake-build-debug/CMakeFiles/Malloc-Fantasy.dir/main.c.obj"
   )
-set(CMAKE_C_COMPILER_ID "MSVC")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
