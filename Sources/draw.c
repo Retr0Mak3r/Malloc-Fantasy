@@ -1,4 +1,4 @@
-#include "prototypes.h"
+#include "../Headers/prototype.h"
 
 
 void drawGame(void)

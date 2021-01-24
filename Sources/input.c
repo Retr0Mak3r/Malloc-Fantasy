@@ -1,4 +1,4 @@
-#include "prototype.h"
+#include "../Headers/prototype.h"
 
 void gestionInputs(Input *input)
 {
