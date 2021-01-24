@@ -13,3 +13,4 @@ extern void gestionInputs(Input *input);
 extern void getInput(Input *input);
 extern SDL_Renderer *getrenderer(void);
 extern void init(char *);
+ extern void music(void);
