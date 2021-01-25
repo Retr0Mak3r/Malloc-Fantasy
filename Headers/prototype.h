@@ -20,4 +20,3 @@ extern void init(char *);
 extern void initMaps(void);
 extern void loadGame(void);
 extern SDL_Texture *loadImage(char *name);
-extern void loadSong(void *userdata, Uint8 *stream, int len);

@@ -74,12 +74,8 @@ void init(char *title)
 
 void loadGame(void)
 {
-    static Uint32 wav_length; // length of our sample
-    static Uint8 *wav_buffer; // buffer containing our audio file
-    static SDL_AudioSpec wav_spec;
 //On charge les données pour la map et la musique
     initMaps();
-    loadSong();
 }
 
 
