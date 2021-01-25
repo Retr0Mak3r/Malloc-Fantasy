@@ -92,6 +92,9 @@
 		<Unit filename="C:/Users/gallo_umchrss/Desktop/projets/projet C/Sources/map.c">
 			<Option target="Malloc-Fantasy"/>
 		</Unit>
+		<Unit filename="C:/Users/gallo_umchrss/Desktop/projets/projet C/Sources/sounds.c">
+			<Option target="Malloc-Fantasy"/>
+		</Unit>
 		<Unit filename="C:/Users/gallo_umchrss/Desktop/projets/projet C/main.c">
 			<Option target="Malloc-Fantasy"/>
 		</Unit>
