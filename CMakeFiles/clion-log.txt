@@ -1,0 +1,4 @@
+Cannot generate into C:\Users\mai_k\CLionProjects\Malloc-Fantasy
+It is already used for project C:\Users\gallo_umchrss\Desktop\projets\projet C
+
+Please either delete it manually or select another generation directory
