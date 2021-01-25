@@ -249,32 +249,32 @@ Sources/map.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.s
 .PHONY : Sources/map.c.s
 
-Sources/sounds.obj: Sources/sounds.c.obj
+Sources/player.obj: Sources/player.c.obj
 
-.PHONY : Sources/sounds.obj
+.PHONY : Sources/player.obj
 
 # target to build an object file
-Sources/sounds.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/sounds.c.obj
-.PHONY : Sources/sounds.c.obj
+Sources/player.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj
+.PHONY : Sources/player.c.obj
 
-Sources/sounds.i: Sources/sounds.c.i
+Sources/player.i: Sources/player.c.i
 
-.PHONY : Sources/sounds.i
+.PHONY : Sources/player.i
 
 # target to preprocess a source file
-Sources/sounds.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/sounds.c.i
-.PHONY : Sources/sounds.c.i
+Sources/player.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.i
+.PHONY : Sources/player.c.i
 
-Sources/sounds.s: Sources/sounds.c.s
+Sources/player.s: Sources/player.c.s
 
-.PHONY : Sources/sounds.s
+.PHONY : Sources/player.s
 
 # target to generate assembly for a file
-Sources/sounds.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/sounds.c.s
-.PHONY : Sources/sounds.c.s
+Sources/player.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.s
+.PHONY : Sources/player.c.s
 
 main.obj: main.c.obj
 
@@ -324,9 +324,9 @@ help:
 	@echo ... Sources/map.obj
 	@echo ... Sources/map.i
 	@echo ... Sources/map.s
-	@echo ... Sources/sounds.obj
-	@echo ... Sources/sounds.i
-	@echo ... Sources/sounds.s
+	@echo ... Sources/player.obj
+	@echo ... Sources/player.i
+	@echo ... Sources/player.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

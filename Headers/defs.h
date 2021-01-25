@@ -22,3 +22,18 @@
 
 #define SCREEN_WIDTH 800
 #define SCREEN_HEIGHT 600
+
+// ********** Character Spec *******
+// Sprite height and width
+#define PLAYER_WIDTH 15
+#define PLAYER_HEIGHT 15
+
+// Animation
+#define IDLE 0
+#define WALK 1
+#define R_CHARACTER 2
+#define L_CHARACTER 3
+#define DEAD 4
+
+#define RIGHT 1
+#define LEFT 2

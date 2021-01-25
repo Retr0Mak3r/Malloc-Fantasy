@@ -145,19 +145,19 @@ CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.s"
 	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\map.c" -o CMakeFiles\Malloc-Fantasy.dir\Sources\map.c.s
 
-CMakeFiles/Malloc-Fantasy.dir/Sources/sounds.c.obj: CMakeFiles/Malloc-Fantasy.dir/flags.make
-CMakeFiles/Malloc-Fantasy.dir/Sources/sounds.c.obj: CMakeFiles/Malloc-Fantasy.dir/includes_C.rsp
-CMakeFiles/Malloc-Fantasy.dir/Sources/sounds.c.obj: Sources/sounds.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\gallo_umchrss\Desktop\projets\projet C\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Malloc-Fantasy.dir/Sources/sounds.c.obj"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Malloc-Fantasy.dir\Sources\sounds.c.obj -c "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\sounds.c"
+CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj: CMakeFiles/Malloc-Fantasy.dir/flags.make
+CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj: CMakeFiles/Malloc-Fantasy.dir/includes_C.rsp
+CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj: Sources/player.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\gallo_umchrss\Desktop\projets\projet C\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\Malloc-Fantasy.dir\Sources\player.c.obj -c "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\player.c"
 
-CMakeFiles/Malloc-Fantasy.dir/Sources/sounds.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Malloc-Fantasy.dir/Sources/sounds.c.i"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\sounds.c" > CMakeFiles\Malloc-Fantasy.dir\Sources\sounds.c.i
+CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.i"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\player.c" > CMakeFiles\Malloc-Fantasy.dir\Sources\player.c.i
 
-CMakeFiles/Malloc-Fantasy.dir/Sources/sounds.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Malloc-Fantasy.dir/Sources/sounds.c.s"
-	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\sounds.c" -o CMakeFiles\Malloc-Fantasy.dir\Sources\sounds.c.s
+CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.s"
+	C:\msys64\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\gallo_umchrss\Desktop\projets\projet C\Sources\player.c" -o CMakeFiles\Malloc-Fantasy.dir\Sources\player.c.s
 
 # Object files for target Malloc-Fantasy
 Malloc__Fantasy_OBJECTS = \
@@ -166,7 +166,7 @@ Malloc__Fantasy_OBJECTS = \
 "CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj" \
 "CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.obj" \
 "CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.obj" \
-"CMakeFiles/Malloc-Fantasy.dir/Sources/sounds.c.obj"
+"CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj"
 
 # External object files for target Malloc-Fantasy
 Malloc__Fantasy_EXTERNAL_OBJECTS =
@@ -176,7 +176,7 @@ bin/Malloc-Fantasy.exe: CMakeFiles/Malloc-Fantasy.dir/Sources/init.c.obj
 bin/Malloc-Fantasy.exe: CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj
 bin/Malloc-Fantasy.exe: CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.obj
 bin/Malloc-Fantasy.exe: CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.obj
-bin/Malloc-Fantasy.exe: CMakeFiles/Malloc-Fantasy.dir/Sources/sounds.c.obj
+bin/Malloc-Fantasy.exe: CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj
 bin/Malloc-Fantasy.exe: CMakeFiles/Malloc-Fantasy.dir/build.make
 bin/Malloc-Fantasy.exe: CMakeFiles/Malloc-Fantasy.dir/linklibs.rsp
 bin/Malloc-Fantasy.exe: CMakeFiles/Malloc-Fantasy.dir/objects1.rsp

@@ -12,6 +12,8 @@ void drawGame(void)
 
 // Délai pour laisser respirer le proc
     SDL_Delay(1);
+    // Affiche le joueur
+    drawPlayer();
 
 }
 

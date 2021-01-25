@@ -1,28 +1,94 @@
 #include "../Headers/prototype.h"
 
-Map map;
+GameObject player;
+SDL_Texture *playerSpriteSheet;
 
-void initMaps(void)
+
+//Renvoie le GameObject player (héros)
+GameObject *getPlayer(void)
 {
-// Charge l'image du fond (background)
-    map.background = loadImage("graphics/background_test.png");
+    return &player;
 }
 
 
-SDL_Texture *getBackground(void)
+//Renvoie les coordonnées x du héros
+int getPlayerx(void)
 {
-    return map.background;
+    return player.x;
 }
 
 
-void cleanMaps(void)
+//Renvoie les coordonnées y du héros
+int getPlayery(void)
 {
-// Libère la texture du background
-    if (map.background != NULL)
+    return player.y;
+}
+
+
+//Change la valeur des coordonnées x du héros
+void setPlayerx(int valeur)
+{
+    player.x = valeur;
+}
+
+
+//Change la valeur des coordonnées y du héros
+void setPlayery(int valeur)
+{
+    player.y = valeur;
+}
+
+//Charge la spritesheet (= feuille de sprites) de notre héros
+//au début du jeu
+void initPlayerSprites(void)
+{
+    playerSpriteSheet = loadImage("graphics/sprite_warrior.png");
+}
+
+
+//Libère le sprite du héros à la fin du jeu
+void cleanPlayer(void)
+{
+    if (playerSpriteSheet != NULL)
     {
-        SDL_DestroyTexture(map.background);
-        map.background = NULL;
+        SDL_DestroyTexture(playerSpriteSheet);
+        playerSpriteSheet = NULL;
     }
+}
+void initializePlayer(void)
+{
+
+//PV à 3
+    player.life = 300;
+
+//Timer d'invincibilité à 0
+    player.invincibleTimer = 0;
+
+//Indique l'état et la direction de notre héros
+    player.direction = RIGHT;
+    player.etat = IDLE;
+
+//Indique le numéro de la frame où commencer
+    player.frameNumber = 0;
+
+//...la valeur de son chrono ou timer
+    player.frameTimer = TIME_BETWEEN_2_FRAMES_PLAYER;
+
+//... et son nombre de frames max (8 pour l'anim' IDLE
+// = ne fait rien)
+    player.frameMax = 8;
+
+    player.x = getBeginX();
+    player.y = getBeginY();
+
+/* Hauteur et largeur de notre héros */
+    player.w = PLAYER_WIDTH;
+    player.h = PLAYER_HEIGTH;
+
+//Variables nécessaires au fonctionnement de la gestion des collisions
+    player.timerMort = 0;
+    player.onGround = 0;
+
 }
 void drawPlayer(void)
 {
