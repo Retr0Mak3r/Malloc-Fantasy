@@ -13,7 +13,6 @@ typedef struct Input
 // **************** manage the map *****************
 typedef struct Map
 {
-
     SDL_Texture *background;
 
 } Map;

@@ -66,10 +66,10 @@ RM = C:\msys64\mingw64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\gallo_umchrss\Desktop\projets\projet C"
+CMAKE_SOURCE_DIR = C:\Users\mai_k\CLionProjects\Malloc-Fantasy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\gallo_umchrss\Desktop\projets\projet C"
+CMAKE_BINARY_DIR = C:\Users\mai_k\CLionProjects\Malloc-Fantasy
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -98,9 +98,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gallo_umchrss\Desktop\projets\projet C\CMakeFiles" "C:\Users\gallo_umchrss\Desktop\projets\projet C\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mai_k\CLionProjects\Malloc-Fantasy\CMakeFiles C:\Users\mai_k\CLionProjects\Malloc-Fantasy\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gallo_umchrss\Desktop\projets\projet C\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mai_k\CLionProjects\Malloc-Fantasy\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -140,6 +140,33 @@ Malloc-Fantasy: cmake_check_build_system
 Malloc-Fantasy/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/build
 .PHONY : Malloc-Fantasy/fast
+
+Sources/Start.obj: Sources/Start.c.obj
+
+.PHONY : Sources/Start.obj
+
+# target to build an object file
+Sources/Start.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/Start.c.obj
+.PHONY : Sources/Start.c.obj
+
+Sources/Start.i: Sources/Start.c.i
+
+.PHONY : Sources/Start.i
+
+# target to preprocess a source file
+Sources/Start.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/Start.c.i
+.PHONY : Sources/Start.c.i
+
+Sources/Start.s: Sources/Start.c.s
+
+.PHONY : Sources/Start.s
+
+# target to generate assembly for a file
+Sources/Start.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/Start.c.s
+.PHONY : Sources/Start.c.s
 
 Sources/draw.obj: Sources/draw.c.obj
 
@@ -222,33 +249,6 @@ Sources/input.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.s
 .PHONY : Sources/input.c.s
 
-Sources/map.obj: Sources/map.c.obj
-
-.PHONY : Sources/map.obj
-
-# target to build an object file
-Sources/map.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.obj
-.PHONY : Sources/map.c.obj
-
-Sources/map.i: Sources/map.c.i
-
-.PHONY : Sources/map.i
-
-# target to preprocess a source file
-Sources/map.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.i
-.PHONY : Sources/map.c.i
-
-Sources/map.s: Sources/map.c.s
-
-.PHONY : Sources/map.s
-
-# target to generate assembly for a file
-Sources/map.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/map.c.s
-.PHONY : Sources/map.c.s
-
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -285,6 +285,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Malloc-Fantasy
+	@echo ... Sources/Start.obj
+	@echo ... Sources/Start.i
+	@echo ... Sources/Start.s
 	@echo ... Sources/draw.obj
 	@echo ... Sources/draw.i
 	@echo ... Sources/draw.s
@@ -294,9 +297,6 @@ help:
 	@echo ... Sources/input.obj
 	@echo ... Sources/input.i
 	@echo ... Sources/input.s
-	@echo ... Sources/map.obj
-	@echo ... Sources/map.i
-	@echo ... Sources/map.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

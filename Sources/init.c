@@ -3,6 +3,7 @@
 
 SDL_Window *screen;
 SDL_Renderer *renderer;
+SDL_Surface *pSurf;
 
 
 SDL_Renderer *getrenderer(void)
@@ -48,6 +49,8 @@ void init(char *title)
         exit(1);
     }
 
+
+
     //On initialise SDL_Mixer 2, qui gérera la musique et les effets sonores
     int flags = MIX_INIT_MP3;
     int initted = Mix_Init(flags);
@@ -68,19 +71,39 @@ void init(char *title)
     // Définit le nombre de pistes audio (channels) à mixer
     Mix_AllocateChannels(32);
 
+    pSurf=SDL_GetWindowSurface(screen);
+
+}
+
+void fText(SDL_Color color_text, int x, int y, const char* text){
+    SDL_Rect position;
+
+    //police
+    TTF_Font *police = TTF_OpenFont("../bin/fonts/arial.ttf", 60);
+    SDL_Surface *texte = TTF_RenderText_Blended(police, text, color_text);
+
+    //aft
+    SDL_FillRect(pSurf, NULL, SDL_MapRGB(pSurf->format, 255, 255, 255));
+    position.x = x;
+    position.y = y;
+//        SDL_BlitSurface(fond, NULL, pSurf, &position); /* Blit du fond */
+//        position.x = 60;
+//        position.y = 370;
+    SDL_BlitSurface(texte, NULL, pSurf, &position); /* Blit du texte */
+    SDL_UpdateWindowSurface(screen);
 }
 
 void loadGame(void)
 {
-//On charge les données pour la map
-    initMaps();
+//On charge les données pour le start screen
+    iniStart();
 }
 
 
 void cleanup()
 {
     //Nettoie les sprites de la map
-    cleanMaps();
+    cleanstart();
 
     //On quitte SDL_Mixer 2 et on décharge la mémoire
     Mix_CloseAudio();
@@ -93,8 +116,10 @@ void cleanup()
     screen = NULL;
 
     //On quitte SDL_TTF 2
+    //TTF_CloseFont(police);
     TTF_Quit();
 
     //On quitte la SDL
     SDL_Quit();
 }
+
