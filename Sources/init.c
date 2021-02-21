@@ -78,6 +78,7 @@ void init(char *title)
 void fText(SDL_Color color_text, int x, int y, const char* text){
     SDL_Rect position;
 
+
     //police
     TTF_Font *police = TTF_OpenFont("../bin/fonts/arial.ttf", 60);
     SDL_Surface *texte = TTF_RenderText_Blended(police, text, color_text);
@@ -86,7 +87,9 @@ void fText(SDL_Color color_text, int x, int y, const char* text){
     SDL_FillRect(pSurf, NULL, SDL_MapRGB(pSurf->format, 255, 255, 255));
     position.x = x;
     position.y = y;
-
+//        SDL_BlitSurface(fond, NULL, pSurf, &position); /* Blit du fond */
+//        position.x = 60;
+//        position.y = 370;
     SDL_BlitSurface(texte, NULL, pSurf, &position); /* Blit du texte */
     SDL_UpdateWindowSurface(screen);
 }

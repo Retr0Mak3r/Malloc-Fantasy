@@ -118,4 +118,17 @@ int main(int argc,char** argv)
         delay(frameLimit);
         frameLimit = SDL_GetTicks() + 16;
     }
+
+
+
+    // gestion sql on ne s en occupe pas pour le moment xD
+    MYSQL *connexion = mysql_init(NULL);
+    if(connexion== NULL)
+    {
+        printf("failed...");
+    }else
+    {
+        printf("success");
+    }
+    exit(0);
 }
