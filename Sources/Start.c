@@ -4,11 +4,10 @@ Map background;
 
 void iniStart(void)
 {
-// Charge l'image du fond (background)
+    // Charge l'image du fond (background)
     background.background = loadImage("graphics/title.jpg");
     fText((SDL_Color){0,0,0},10,10,"hello");
     printf("Start to play or echap to quit \n");
-
 }
 
 
@@ -31,7 +30,7 @@ void cleanstart(void)
 void initMenu(void)
 {
     // Charge l'image du menu
-    background.background = loadImage("graphics/menu.png");
+    background.background = loadImage("graphics/menu_3.png");
     printf("****** Menu ****** \n");
     printf("* 1- New Game    * \n");
     printf("* 2- Scores      * \n");
