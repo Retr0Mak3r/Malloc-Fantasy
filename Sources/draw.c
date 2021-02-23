@@ -21,8 +21,6 @@ void drawGame(state){
         SDL_Color colorBlack = {0, 0, 0};
         texte = TTF_RenderText_Blended(police, "mon texte", colorBlack);
 
-
-
     }
     if(state==2)
     {

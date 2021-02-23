@@ -10,8 +10,7 @@
 #include <stdlib.h>
 #include <SDL_ttf.h>
 #include <stdbool.h>
-
-//#include <mysql.h>
+#include <mysql.h>
 
 //#include <conio.h>
 //#include <string.h>

@@ -65,10 +65,18 @@ void init(){
     TTF_Init();
     if(TTF_Init() == -1)
     {
-        printf("6- TTF_init echec \n");
+        printf("TTF_init echec \n");
         fprintf(stderr, "Erreur d'initialisation de TTF_Init : %s\n", TTF_GetError());
     }   else{
-        printf("TTF_init ok \n");
+        printf("6- TTF_init ok \n");
+    }
+    MYSQL *connexion = mysql_init(NULL);
+    if(connexion== NULL)
+    {
+        printf("Mysql init echec \n");
+    }else
+    {
+        printf("7- Mysql init success \n");
     }
 }
 
