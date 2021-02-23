@@ -12,123 +12,93 @@
 
 
 #include "Headers/prototype.h"
+#include "Headers/defs.h"
 
-/* Variables uses during the game */
-Input input;
-
-int main(int argc,char** argv)
+int main(int argc,char *argv[])
 {
-    unsigned int frameLimit = SDL_GetTicks() + 16;
-    bool isRunning;
-    int State;
+    SDL_Event touche;
+    bool isRunning = true;
+    int state = 1;
 
+    /* ***************************** *
+     * =========== State =========== *
+     * 1- Start Screen               *
+     * 2- Menu                       *
+     * 3- Creation character         *
+     * 4- Game                       *
+     * 5- Score                      *
+     * 6- Quit                       *
+     * ***************************** */
 
-    SDL_Event event;
-
-    // Initialisation de la SDL
-    init("Malloc Fantasy -v1-");
-    loadGame();
-
-
-    // cleanup at the end
-    atexit(cleanup);
-
-    isRunning=true;
-    State=1;
-
-    // gameLoop
+    init();
     while(isRunning==true)
     {
-        SDL_WaitEvent(&event);
-        switch(event.type)
+        drawGame(state);
+
+        SDL_WaitEvent(&touche);
+        if (state==1)
         {
-            case SDL_QUIT:
-                isRunning = false;
-                break;
+            printf("1- Start \n");
+        }
+        if (state==2)
+        {
+            printf("2- Menu \n");
+            //1 new game
+            //2 score
+            //3 quit
+        }
+        if (state==3)
+        {
+            printf("3- Creation du personnage \n");
+        }
+        if (state==4)
+        {
+            printf("4- Lancement du jeu \n");
+        }
+        if (state==5)
+        {
+            printf("5- affichage des scores \n");
+        }
 
+        if (state==6)
+        {
+            closeGame();
+        }
+        switch (touche.type)
+        {
             case SDL_KEYDOWN:
-                switch (event.key.keysym.sym) {
+                switch (touche.key.keysym.sym)
+                {
+                    case SDLK_RETURN:
+                        if (state==1)
+                        {
+                            state=2;
+                        } break;
+
+                    case SDLK_1:
+                        if (state==2)
+                        {
+                            state=3;
+                        } break;
+                    case SDLK_2:
+                        if (state==2)
+                        {
+                            state=5;
+                        } break;
+                    case SDLK_3:
+                        if (state==2)
+                        {
+                            state=6;
+                        } break;
                     case SDLK_ESCAPE:
-                        isRunning=false;
-                }
-                break;
-        }
-
-        //-------- Start --------
-        if(State==1){
-            iniStart();
-
-            switch(event.type)
-            {
-                case SDL_KEYDOWN:
-                    switch (event.key.keysym.sym) {
-                        case SDLK_RETURN:
-                            State=2;
-                    }
-                    break;
-            }
-        }
-
-
-        //------- Menu --------
-        if(State==2){
-            //appel background menu
-            initMenu();
-
-
-            switch(event.type)
-            {
-                case SDL_KEYDOWN:
-                    switch (event.key.keysym.sym) {
-                        case SDLK_1:
-                            State=3;
-                            break;
-
-                        case SDLK_2:
-                            State=4;
-                            break;
-
-                        case SDLK_3:
-                            State=1;
-                            break;
-                    }
-                    break;
-            }
+                        isRunning = false;
+                        state=6;
+                        break;
+                }break;
 
         }
-
-        //------- New Game -------
-        if(State==3){
-            printf("Creation du personnage \n");
-        }
-
-        //------- Score -------
-        if(State==4){
-            printf("Consultation des scores \n");
-        }
-
-        // --------------- ne pas toucher -------------
-        //keyboard input
-        gestionInputs(&input);
-
-        //renderer
-        drawGame();
-
-        // Gestion des 60 fps (1000ms/60 = 16.6 -> 16
-        delay(frameLimit);
-        frameLimit = SDL_GetTicks() + 16;
     }
 
 
-
-    // gestion sql on ne s en occupe pas pour le moment xD
-    MYSQL *connexion = mysql_init(NULL);
-    if(connexion== NULL)
-    {
-        printf("failed...");
-    }else
-    {
-        printf("success");
-    }
     exit(0);
 }

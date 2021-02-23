@@ -4,7 +4,7 @@ project(Malloc-Fantasy C)
 set(CMAKE_C_STANDARD 99)
 
 
-add_executable(Malloc-Fantasy main.c Sources/init.c Sources/draw.c Sources/input.c Sources/Start.c)
+add_executable(Malloc-Fantasy main.c Sources/init.c Sources/draw.c Sources/player.c)
 
 target_link_directories(Malloc-Fantasy PUBLIC ${CMAKE_SOURCE_DIR}/Mysql/lib)
 target_include_directories(Malloc-Fantasy PUBLIC ${CMAKE_SOURCE_DIR}/Mysql/include)

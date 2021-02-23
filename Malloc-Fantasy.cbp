@@ -80,16 +80,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Sources/Start.c">
-			<Option target="Malloc-Fantasy"/>
-		</Unit>
 		<Unit filename="C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Sources/draw.c">
 			<Option target="Malloc-Fantasy"/>
 		</Unit>
 		<Unit filename="C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Sources/init.c">
 			<Option target="Malloc-Fantasy"/>
 		</Unit>
-		<Unit filename="C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Sources/input.c">
+		<Unit filename="C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Sources/player.c">
 			<Option target="Malloc-Fantasy"/>
 		</Unit>
 		<Unit filename="C:/Users/mai_k/CLionProjects/Malloc-Fantasy/main.c">

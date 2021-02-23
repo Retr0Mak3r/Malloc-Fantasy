@@ -141,33 +141,6 @@ Malloc-Fantasy/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/build
 .PHONY : Malloc-Fantasy/fast
 
-Sources/Start.obj: Sources/Start.c.obj
-
-.PHONY : Sources/Start.obj
-
-# target to build an object file
-Sources/Start.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/Start.c.obj
-.PHONY : Sources/Start.c.obj
-
-Sources/Start.i: Sources/Start.c.i
-
-.PHONY : Sources/Start.i
-
-# target to preprocess a source file
-Sources/Start.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/Start.c.i
-.PHONY : Sources/Start.c.i
-
-Sources/Start.s: Sources/Start.c.s
-
-.PHONY : Sources/Start.s
-
-# target to generate assembly for a file
-Sources/Start.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/Start.c.s
-.PHONY : Sources/Start.c.s
-
 Sources/draw.obj: Sources/draw.c.obj
 
 .PHONY : Sources/draw.obj
@@ -222,32 +195,32 @@ Sources/init.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/init.c.s
 .PHONY : Sources/init.c.s
 
-Sources/input.obj: Sources/input.c.obj
+Sources/player.obj: Sources/player.c.obj
 
-.PHONY : Sources/input.obj
+.PHONY : Sources/player.obj
 
 # target to build an object file
-Sources/input.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.obj
-.PHONY : Sources/input.c.obj
+Sources/player.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj
+.PHONY : Sources/player.c.obj
 
-Sources/input.i: Sources/input.c.i
+Sources/player.i: Sources/player.c.i
 
-.PHONY : Sources/input.i
+.PHONY : Sources/player.i
 
 # target to preprocess a source file
-Sources/input.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.i
-.PHONY : Sources/input.c.i
+Sources/player.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.i
+.PHONY : Sources/player.c.i
 
-Sources/input.s: Sources/input.c.s
+Sources/player.s: Sources/player.c.s
 
-.PHONY : Sources/input.s
+.PHONY : Sources/player.s
 
 # target to generate assembly for a file
-Sources/input.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/input.c.s
-.PHONY : Sources/input.c.s
+Sources/player.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Malloc-Fantasy.dir\build.make CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.s
+.PHONY : Sources/player.c.s
 
 main.obj: main.c.obj
 
@@ -285,18 +258,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Malloc-Fantasy
-	@echo ... Sources/Start.obj
-	@echo ... Sources/Start.i
-	@echo ... Sources/Start.s
 	@echo ... Sources/draw.obj
 	@echo ... Sources/draw.i
 	@echo ... Sources/draw.s
 	@echo ... Sources/init.obj
 	@echo ... Sources/init.i
 	@echo ... Sources/init.s
-	@echo ... Sources/input.obj
-	@echo ... Sources/input.i
-	@echo ... Sources/input.s
+	@echo ... Sources/player.obj
+	@echo ... Sources/player.i
+	@echo ... Sources/player.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

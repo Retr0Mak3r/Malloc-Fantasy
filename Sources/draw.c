@@ -1,80 +1,67 @@
-#include "../Headers/prototype.h"
+#include "../Headers/defs.h"
+extern SDL_Renderer *renderer;
+extern SDL_Texture *texture;
+extern SDL_Surface *surface;
+extern SDL_Surface *texte;
+extern SDL_Surface *image;
+extern TTF_Font *police;
 
 
-void drawGame(void)
-{
+void drawGame(state){
+    printf("draw game %d \n", state);
+    /*
+    //------------- couleur du renderer --------------
+    if(0 != SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255))
+    {
+        fprintf(stderr, "Erreur SDL_SetRenderDrawColor : %s", SDL_GetError());
+    }
 
-// Affiche le fond (background) aux coordonnées (0,0)
-    drawImage(getBackground(), 0, 0);
+    if(0 != SDL_RenderClear(renderer))
+    {
+        fprintf(stderr, "Erreur SDL_SetRenderDrawColor : %s", SDL_GetError());
+    }
 
-// Affiche l'écran
-    SDL_RenderPresent(getrenderer());
+    SDL_RenderPresent(renderer);
+    SDL_Delay(500);
+    
 
-// Délai pour laisser respirer le proc
-    SDL_Delay(1);
+    if(0 != SDL_SetRenderDrawColor(renderer, 255, 127, 40, 255))
+    {
+        fprintf(stderr, "Erreur SDL_SetRenderDrawColor : %s", SDL_GetError());
+    }
+
+    if(0 != SDL_RenderClear(renderer))
+    {
+        fprintf(stderr, "Erreur SDL_SetRenderDrawColor : %s", SDL_GetError());
+    }
+    SDL_RenderPresent(renderer);
+    */
+
+    //surface = SDL_LoadBMP("../bin/graphics/title_2.bmp");
+    if(state==1)
+    {
+
+        image = SDL_LoadBMP("../bin/graphics/title_2.bmp");
+        texture = SDL_CreateTextureFromSurface(renderer, image);
+        SDL_RenderCopy(renderer, texture, NULL, NULL);
+        SDL_RenderPresent(renderer);
+
+
+
+        police = TTF_OpenFont("../bin/fonts/arial.ttf", 65);
+        SDL_Color colorBlack = {0, 0, 0};
+        texte = TTF_RenderText_Blended(police, "mon texte", colorBlack);
+
+
+
+    }
+    if(state==2)
+    {
+        image = SDL_LoadBMP("../bin/graphics/Menu.bmp");
+        texture = SDL_CreateTextureFromSurface(renderer, image);
+        SDL_RenderCopy(renderer, texture, NULL, NULL);
+        SDL_RenderPresent(renderer);
+    }
 
 }
 
-
-SDL_Texture *loadImage(char *name)
-{
-
-/* Charge les images avec SDL Image dans une SDL_Surface */
-
-    SDL_Surface *loadedImage = NULL;
-    SDL_Texture *texture = NULL;
-    loadedImage = IMG_Load(name);
-
-    if (loadedImage != NULL)
-    {
-// Conversion de l'image en texture
-        texture = SDL_CreateTextureFromSurface(getrenderer(), loadedImage);
-
-// On se débarrasse du pointeur vers une surface
-        SDL_FreeSurface(loadedImage);
-        loadedImage = NULL;
-    }
-    else
-        printf("L'image n'a pas pu être chargée! SDL_Error : %s\n", SDL_GetError());
-
-    return texture;
-
-}
-
-
-void drawImage(SDL_Texture *image, int x, int y)
-{
-
-    SDL_Rect dest;
-
-/* Règle le rectangle à dessiner selon la taille de l'image source */
-    dest.x = x;
-    dest.y = y;
-
-/* Dessine l'image entière sur l'écran aux coordonnées x et y */
-    SDL_QueryTexture(image, NULL, NULL, &dest.w, &dest.h);
-    SDL_RenderCopy(getrenderer(), image, NULL, &dest);
-
-}
-
-
-void delay(unsigned int frameLimit)
-{
-    // Gestion des 60 fps (images/seconde)
-    unsigned int ticks = SDL_GetTicks();
-
-    if (frameLimit < ticks)
-    {
-        return;
-    }
-
-    if (frameLimit > ticks + 16)
-    {
-        SDL_Delay(16);
-    }
-
-    else
-    {
-        SDL_Delay(frameLimit - ticks);
-    }
-}

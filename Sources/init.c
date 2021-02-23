@@ -1,126 +1,89 @@
-#include "../Headers/prototype.h"
-
-
-SDL_Window *screen;
+#include "../Headers/defs.h"
+SDL_Window *window;
 SDL_Renderer *renderer;
-SDL_Surface *pSurf;
-
-
-SDL_Renderer *getrenderer(void)
-{
-    return renderer;
-}
-
-
-void init(char *title)
-{
-    screen = SDL_CreateWindow(title,
-                              SDL_WINDOWPOS_CENTERED,
-                              SDL_WINDOWPOS_CENTERED,
-                              SCREEN_WIDTH, SCREEN_HEIGHT,
-                              SDL_WINDOW_SHOWN);
-
-
-    renderer = SDL_CreateRenderer(screen, -1, SDL_RENDERER_PRESENTVSYNC);
-
-    // Si on n'y arrive pas, on quitte en enregistrant l'erreur dans stdout.txt
-    if (screen == NULL || renderer == NULL)
-    {
-        printf("Impossible d'initialiser le mode écran à %d x %d: %s\n", SCREEN_WIDTH,
-               SCREEN_HEIGHT, SDL_GetError());
-        exit(1);
-    }
-
-    //Initialisation du chargement des images png avec SDL_Image 2
-    int imgFlags = IMG_INIT_PNG;
-    if( !( IMG_Init( imgFlags ) & imgFlags ) )
-    {
-        printf( "SDL_image n'a pu être initialisée! SDL_image Error: %s\n", IMG_GetError() );
-        exit(1);
-    }
-
-    //On cache le curseur de la souris
-    SDL_ShowCursor(SDL_DISABLE);
-
-    //On initialise SDL_TTF 2 qui gérera l'écriture de texte
-    if (TTF_Init() < 0)
-    {
-        printf("Impossible d'initialiser SDL TTF: %s\n", TTF_GetError());
-        exit(1);
-    }
+SDL_Texture *texture;
+SDL_Surface *surface, *image, *texte;
+TTF_Font *police;
+int statut;
 
 
 
-    //On initialise SDL_Mixer 2, qui gérera la musique et les effets sonores
-    int flags = MIX_INIT_MP3;
-    int initted = Mix_Init(flags);
-    if ((initted & flags) != flags)
-    {
-        printf("Mix_Init: Failed to init SDL_Mixer\n");
-        printf("Mix_Init: %s\n", Mix_GetError());
-        exit(1);
-    }
 
-    /* Open 44.1KHz, signed 16bit, system byte order,
-    stereo audio, using 1024 byte chunks (voir la doc pour plus d'infos) */
-    if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024) == -1) {
-        printf("Mix_OpenAudio: %s\n", Mix_GetError());
-        exit(1);
-    }
-
-    // Définit le nombre de pistes audio (channels) à mixer
-    Mix_AllocateChannels(32);
-
-    pSurf=SDL_GetWindowSurface(screen);
-
-}
-
-void fText(SDL_Color color_text, int x, int y, const char* text){
-    SDL_Rect position;
-
-
-    //police
-    TTF_Font *police = TTF_OpenFont("../bin/fonts/arial.ttf", 60);
-    SDL_Surface *texte = TTF_RenderText_Blended(police, text, color_text);
-
-    //aft
-    SDL_FillRect(pSurf, NULL, SDL_MapRGB(pSurf->format, 255, 255, 255));
-    position.x = x;
-    position.y = y;
-//        SDL_BlitSurface(fond, NULL, pSurf, &position); /* Blit du fond */
-//        position.x = 60;
-//        position.y = 370;
-    SDL_BlitSurface(texte, NULL, pSurf, &position); /* Blit du texte */
-    SDL_UpdateWindowSurface(screen);
-}
-
-void loadGame(void)
-{
-//On charge les données pour le start screen
-    iniStart();
-}
-
-
-void cleanup()
-{
-    //Nettoie les sprites de la map
-    cleanstart();
-
-    //On quitte SDL_Mixer 2 et on décharge la mémoire
-    Mix_CloseAudio();
-    Mix_Quit();
-
-    //On fait le ménage et on remet les pointeurs à NULL
-    SDL_DestroyRenderer(renderer);
+void init(){
+    window = NULL;
     renderer = NULL;
-    SDL_DestroyWindow(screen);
-    screen = NULL;
+    texture = NULL;
+    surface = NULL;
+    texte = NULL;
+    image = NULL;
+    statut = EXIT_FAILURE;
+    police = NULL;
 
-    //On quitte SDL_TTF 2
-    //TTF_CloseFont(police);
-    TTF_Quit();
+    if(0 != SDL_Init(SDL_INIT_VIDEO))
+    {
+        printf("1- echec de l initialisation \n");
+        fprintf(stderr, "Erreur SDL_Init : %s", SDL_GetError());
+    }   else{
+        printf("1- Initialisation ok \n");
+    }
 
-    //On quitte la SDL
-    SDL_Quit();
+    window = SDL_CreateWindow("Malloc-Fantasy", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+                              1280, 1024, SDL_WINDOW_SHOWN);
+    if(NULL == window)
+    {
+        printf("2- echec de la creation de fenetre \n");
+        fprintf(stderr, "Erreur SDL_CreateWindow : %s", SDL_GetError());
+    }   else{
+        printf("2- Creation de la fenetre ok \n");
+    }
+
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    if(NULL == renderer)
+    {
+        printf("3- echec de la creation du cadre (renderer) \n");
+        fprintf(stderr, "Erreur SDL_CreateRenderer : %s", SDL_GetError());
+    }   else{
+        printf("3- Creation du cadre (renderer) ok \n");
+    }
+
+    texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888,SDL_TEXTUREACCESS_TARGET, 500, 500);
+    if(NULL == texture)
+    {
+        printf("4- echec de la creation de la texture (renderer) \n");
+        fprintf(stderr, "Erreur SDL_CreateTexture : %s", SDL_GetError());
+    }   else{
+        printf("4- Creation de la texture ok \n");
+    }
+    surface = SDL_CreateRGBSurface(0, 300, 200, 32, 0, 0, 0, 0);
+    if(NULL == surface)
+    {
+        printf("5- echec de la creation de la surface (renderer) \n");
+        fprintf(stderr, "Erreur SDL_CreateRGBSurface : %s", SDL_GetError());
+    }   else{
+        printf("Creation de la surface (renderer) ok \n");
+    }
+    TTF_Init();
+    if(TTF_Init() == -1)
+    {
+        printf("6- TTF_init echec \n");
+        fprintf(stderr, "Erreur d'initialisation de TTF_Init : %s\n", TTF_GetError());
+    }   else{
+        printf("TTF_init ok \n");
+    }
 }
 
+//------------------ end ---------------------
+
+    int statut = EXIT_SUCCESS;
+    int closeGame(){
+    printf("Fermeture du jeu ok\n");
+    SDL_FreeSurface(surface);
+    SDL_FreeSurface(image);
+    SDL_DestroyTexture(texture);
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    TTF_CloseFont(police);
+    TTF_Quit();
+    SDL_Quit();
+    return statut;
+}
