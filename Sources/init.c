@@ -108,6 +108,36 @@ void updateScorePlayer(int score){
     free(request);
 }
 
+char*** fetchScorePlayer(){
+    MYSQL_RES *allData;
+    MYSQL_ROW rowScore;
+    char ***returnScore;
+    char *request = malloc(sizeof(char)*255);
+    returnScore=malloc(sizeof(char**)*10);
+    for(int j=0;j<10;j++)
+    {
+        returnScore[j]=malloc(sizeof(char*)*2);
+        for(int k=0;k<2;k++){
+            returnScore[j][k]=malloc(sizeof(char)*11);
+        }
+    }
+
+    sprintf(request, "select pseudo, score from players order by score desc limit 10;");
+    printf("%s\n",request);
+    mysql_query(connexion, request);
+
+    allData=mysql_store_result(connexion);
+    for(int i=0; i<10;i++)
+    {
+        rowScore = mysql_fetch_row(allData);
+        strcpy(returnScore[i][0],rowScore[0]);
+        strcpy(returnScore[i][1],rowScore[1]);
+    }
+
+    return returnScore;
+    free(request);
+}
+
 void setBackground(char *imgpath){
     SDL_RenderClear(renderer);
     image = SDL_LoadBMP(imgpath);
@@ -133,6 +163,7 @@ void addText(int size, SDL_Color color, char *text, int x, int y){
     int statut = EXIT_SUCCESS;
     int closeGame(){
     free(pseudoname);
+    mysql_close(connexion);
     printf("Fermeture du jeu ok\n");
     SDL_FreeSurface(surface);
     SDL_FreeSurface(image);
