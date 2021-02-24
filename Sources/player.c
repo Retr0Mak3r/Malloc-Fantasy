@@ -3,6 +3,7 @@
 extern char *pseudoname;
 int class;
 extern int state;
+extern int update;
 
 int createPlayer()
 {
@@ -41,4 +42,6 @@ int createPlayer()
     addPlayer(pseudoname);
 
     state=4;
+    update=3;
+    printf("la valeur de update est %d \n", update);
 }

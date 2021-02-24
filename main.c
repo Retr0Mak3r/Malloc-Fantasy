@@ -14,12 +14,13 @@
 #include "Headers/prototype.h"
 #include "Headers/defs.h"
 int state;
+int update;
 int main(int argc,char *argv[])
 {
     SDL_Event touche;
     bool isRunning = true;
     state = 1;
-    int update =1;
+    update =1;
 
     /* ***************************** *
      * =========== State =========== *
@@ -46,15 +47,17 @@ int main(int argc,char *argv[])
         {
 
         }
-        if (state==3 && update!=1)
+        if (state==3 && update==2)
         {
-            createPlayer();
             update=1;
-            printf("update eff \n");
+            createPlayer();
         }
-        if (state==4)
+        if (state==4 && update==3)
         {
             printf("4- Lancement du jeu \n");
+            update=1;
+            updateScorePlayer(1000);
+            state=5;
         }
         if (state==5)
         {
@@ -80,7 +83,7 @@ int main(int argc,char *argv[])
                         if (state==2)
                         {
                             state=3;
-                            update++;
+                            update=2;
                         } break;
                     case SDLK_2:
                         if (state==2)
