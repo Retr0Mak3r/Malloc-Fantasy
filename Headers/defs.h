@@ -11,9 +11,10 @@
 #include <SDL_ttf.h>
 #include <stdbool.h>
 #include <mysql.h>
+#include <string.h>
 
 //#include <conio.h>
-//#include <string.h>
+
 
 //#include <math.h>
 

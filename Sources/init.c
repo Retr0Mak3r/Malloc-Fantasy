@@ -4,6 +4,8 @@ SDL_Renderer *renderer;
 SDL_Texture *texture;
 SDL_Surface *surface, *image, *texte;
 TTF_Font *police;
+MYSQL *connexion;
+char *pseudoname;
 int statut;
 
 
@@ -16,6 +18,7 @@ void init(){
     image = NULL;
     statut = EXIT_FAILURE;
     police = NULL;
+    pseudoname = NULL;
 
     if(0 != SDL_Init(SDL_INIT_VIDEO))
     {
@@ -79,13 +82,23 @@ void init(){
     char *unix_socket = NULL;
     unsigned int flag = 0;
 
-    MYSQL *connexion = mysql_init(NULL);
+    connexion = mysql_init(NULL);
 
     if(!(mysql_real_connect(connexion,host,user,password,dbname,port,unix_socket,flag))){
         printf( "Error mysql: %s\n",mysql_error(connexion));
     }   else{
         printf("connexion a la base de donnees -> success \n");
     }
+
+}
+
+void addPlayer(char *pseudo){
+    char *request = malloc(sizeof(char)*256);
+
+    sprintf(request, "INSERT INTO players(pseudo) VALUES ('%s');",pseudo);
+    printf("%s\n",request);
+    mysql_query(connexion, request);
+    free(request);
 }
 
 void setBackground(char *imgpath){
@@ -112,6 +125,7 @@ void addText(int size, SDL_Color color, char *text, int x, int y){
 
     int statut = EXIT_SUCCESS;
     int closeGame(){
+    free(pseudoname);
     printf("Fermeture du jeu ok\n");
     SDL_FreeSurface(surface);
     SDL_FreeSurface(image);
