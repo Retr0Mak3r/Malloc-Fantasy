@@ -1,5 +1,5 @@
 #include "../Headers/defs.h"
-FILE pointer_file;
+FILE* backlog;
 SDL_Window *window;
 SDL_Renderer *renderer;
 SDL_Texture *texture;
@@ -11,6 +11,7 @@ int statut;
 
 
 void init(){
+    backlog=NULL;
     window = NULL;
     renderer = NULL;
     texture = NULL;
@@ -21,56 +22,53 @@ void init(){
     police = NULL;
     pseudoname = NULL;
 
+    backlog = fopen("backlog.txt","a+");
+    fputs("\n ============== NEW GAME ==============", backlog);
+
     if(0 != SDL_Init(SDL_INIT_VIDEO))
     {
-        printf("1- echec de l initialisation \n");
-        fprintf(stderr, "Erreur SDL_Init : %s", SDL_GetError());
+        fprintf(backlog, "Erreur SDL_Init : %s", SDL_GetError());
     }   else{
-        printf("1- Initialisation ok \n");
+        fputs("\n 1- Success / Initialisation SDL + SDL_INIT_VIDEO \n", backlog);
     }
 
     window = SDL_CreateWindow("Malloc-Fantasy", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
                               1280, 1024, SDL_WINDOW_SHOWN);
     if(NULL == window)
     {
-        printf("2- echec de la creation de fenetre \n");
-        fprintf(stderr, "Erreur SDL_CreateWindow : %s", SDL_GetError());
+        fprintf(backlog, "Erreur SDL_CreateWindow : %s", SDL_GetError());
     }   else{
-        printf("2- Creation de la fenetre ok \n");
+        fputs("\n 2- Success / Creation de la fenetre ok", backlog);
     }
 
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     if(NULL == renderer)
     {
-        printf("3- echec de la creation du cadre (renderer) \n");
-        fprintf(stderr, "Erreur SDL_CreateRenderer : %s", SDL_GetError());
+        fprintf(backlog, "Erreur SDL_CreateRenderer : %s", SDL_GetError());
     }   else{
-        printf("3- Creation du cadre (renderer) ok \n");
+        fputs("\n 3- Success / Creation du cadre (renderer) ok", backlog);
     }
 
     texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888,SDL_TEXTUREACCESS_TARGET, 500, 500);
     if(NULL == texture)
     {
-        printf("4- echec de la creation de la texture (renderer) \n");
-        fprintf(stderr, "Erreur SDL_CreateTexture : %s", SDL_GetError());
+        fprintf(backlog, "Erreur SDL_CreateTexture : %s", SDL_GetError());
     }   else{
-        printf("4- Creation de la texture ok \n");
+        fputs("\n 4- Success / Creation de la texture ok", backlog);
     }
     surface = SDL_CreateRGBSurface(0, 1280, 1024, 32, 0, 0, 0, 0);
     if(NULL == surface)
     {
-        printf("5- echec de la creation de la surface (renderer) \n");
-        fprintf(stderr, "Erreur SDL_CreateRGBSurface : %s", SDL_GetError());
+        fprintf(backlog, "Erreur SDL_CreateRGBSurface : %s", SDL_GetError());
     }   else{
-        printf("Creation de la surface (renderer) ok \n");
+        fputs("\n 5- Success / Creation de la surface (renderer) ok", backlog);
     }
     TTF_Init();
     if(TTF_Init() == -1)
     {
-        printf("TTF_init echec \n");
-        fprintf(stderr, "Erreur d'initialisation de TTF_Init : %s\n", TTF_GetError());
+        fprintf(backlog, "Erreur d'initialisation de TTF_Init : %s\n", TTF_GetError());
     }   else{
-        printf("6- TTF_init ok \n");
+        fputs("\n 6- Success / TTF_init ok", backlog);
     }
 
     // ---------------------- initialisation de mysql ----------------------
@@ -86,9 +84,9 @@ void init(){
     connexion = mysql_init(NULL);
 
     if(!(mysql_real_connect(connexion,host,user,password,dbname,port,unix_socket,flag))){
-        printf( "Error mysql: %s\n",mysql_error(connexion));
+        fprintf(backlog, "\n Error mysql: %s\n",mysql_error(connexion));
     }   else{
-        printf("connexion a la base de donnees -> success \n");
+        fputs("\n 7- Success / connexion a la base de donnees -> success", backlog);
     }
 }
 
@@ -96,7 +94,7 @@ void addPlayer(char *pseudo){
     char *request = malloc(sizeof(char)*255);
 
     sprintf(request, "INSERT INTO players(pseudo) VALUES ('%s');",pseudo);
-    printf("%s\n",request);
+    fprintf(backlog,"%s \n",request);
     mysql_query(connexion, request);
     free(request);
 }
@@ -104,10 +102,9 @@ void addPlayer(char *pseudo){
 void updateScorePlayer(int score){
     char *request = malloc(sizeof(char)*255);
     sprintf(request, "UPDATE players SET score = '%d' ORDER BY id desc limit 1;",score);
-    printf("%s\n",request);
+    fprintf(backlog,"%s \n",request);
     mysql_query(connexion, request);
     free(request);
-    printf("Update score ok");
 }
 
 char*** fetchScorePlayer(){
@@ -125,7 +122,7 @@ char*** fetchScorePlayer(){
     }
 
     sprintf(request, "select pseudo, score from players order by score desc limit 10;");
-    printf("%s\n",request);
+    fprintf(backlog,"\n %s",request);
     mysql_query(connexion, request);
 
     allData=mysql_store_result(connexion);
@@ -137,7 +134,6 @@ char*** fetchScorePlayer(){
     }
 
     free(request);
-    printf("fonction retun  score ok");
     return returnScore;
 }
 
@@ -158,7 +154,6 @@ void addText(int size, SDL_Color color, char *text, int x, int y){
     SDL_BlitSurface(texte,NULL,surface,&position);
     texture= SDL_CreateTextureFromSurface(renderer,texte);
     SDL_RenderCopy(renderer, texture, NULL, &position);
-
     SDL_RenderPresent(renderer);
 }
 
@@ -175,6 +170,8 @@ void addText(int size, SDL_Color color, char *text, int x, int y){
     SDL_DestroyWindow(window);
     TTF_CloseFont(police);
     TTF_Quit();
+    fclose(backlog);
     SDL_Quit();
+    fputs("\n normal close", backlog);
     return statut;
 }

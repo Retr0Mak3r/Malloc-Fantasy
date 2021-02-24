@@ -12,13 +12,15 @@
 #include <stdbool.h>
 #include <mysql.h>
 #include <string.h>
+#include <SDL_mixer.h>
+
 
 //#include <conio.h>
 //#include <math.h>
 
 //#include <SDL_image.h>
 
-//#include <SDL_mixer.h>
+
 
 // ********** Window Size **********
 

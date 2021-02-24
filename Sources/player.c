@@ -1,5 +1,6 @@
 #include "../Headers/defs.h"
 #include "../Headers/prototype.h"
+extern FILE* backlog;
 extern char *pseudoname;
 int class = 0;
 extern int state;
@@ -11,21 +12,20 @@ extern SDL_Renderer *renderer;
 
 int createPlayer()
 {
-    printf("creation du joueurs \n");
     pseudoname = malloc(sizeof(char)*11);
     char *tmp = malloc(sizeof(char)*200);
     int lenght;
-    //int choice = 0;
+
     if(pseudoname == NULL)
     {
-        printf("ca a foirée..\n");
+        fputs("\n echec malloc pseudonames", backlog);
     }
-    printf("saisit ton pseudo >=10 caractere\n");
+    printf("saisie ton pseudo >=10 caractere\n");
     scanf("%s", tmp);
     lenght=strlen(tmp);
     while (lenght>10)
     {
-        printf("on a dit moins de 10 \n");
+        printf("il doit faire moins de 10 caractéres\n");
         scanf("%s", tmp);
         lenght=strlen(tmp);
     }
