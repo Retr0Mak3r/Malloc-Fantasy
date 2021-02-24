@@ -15,9 +15,3 @@ extern void addText(int size, SDL_Color color, char *text, int x, int y);
 extern void addPlayer(char*);
 extern void updateScorePlayer(int);
 extern char*** fetchScorePlayer();
-
-
-
-
-
-
