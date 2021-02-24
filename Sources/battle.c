@@ -4,8 +4,8 @@ void battle(){
     char *background_battle;
     background_battle = "../bin/graphics/map_battle.bmp";
     setBackground(background_battle);
-   // SDL_Color color = {125, 125, 125};
-   // addText(60,color,"AH ! un ennemi attaque ! Que voulez-vous faire ? ",500,500);
+    SDL_Color color = {125, 125, 125};
+    addText(60,color,"AH ! un ennemi attaque ! Que voulez-vous faire ? ",500,500);
     player_stat player;
     ennemy_stat ennemy;
     int player_action = 0;
@@ -20,12 +20,11 @@ int player_turn(int ennemy_choice){
     int action = 0;
     int temp = 0;
     int mana = 0;
-    SDL_Color color = {255, 255, 255};
     player_stat player;
     ennemy_stat *ennemy = malloc(sizeof(ennemy));
 //    addText(15,color,"Que voulez-vous faire ? ",500,990);
-    printf("\nQue voulez-vous faire ? ");
-    scanf("%d",&action);
+   // printf("\nQue voulez-vous faire ? ");
+   // scanf("%d",&action);
     switch (action) {
         case 1:
             printf("\nVous avez attaqué");
@@ -55,7 +54,7 @@ int  ennemy_turn(int player_choice){
     player_stat *player = malloc(sizeof(player));
     ennemy_stat ennemy;
     if (action == 1){
-        printf("l\' ennemi attaque");
+      //  printf("l\' ennemi attaque");
         if (player_choice == 2){
             temp = ennemy.attack - player->defense;
             player->life -= temp;
