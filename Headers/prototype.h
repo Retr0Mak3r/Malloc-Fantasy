@@ -8,7 +8,6 @@
 
 /* all fonctions */
 
-
 extern void init();
 extern int closeGame();
 extern void drawGame(int);
@@ -17,12 +16,14 @@ extern void setBackground(char*);
 extern void addText(int size, SDL_Color color, char *text, int x, int y);
 extern void addPlayer(char*);
 extern void updateScorePlayer(int);
+extern char*** fetchScorePlayer();
 extern int player_turn (int);
 extern int character_choice();
 extern player_stat init_stat(int);
 extern ennemy_stat init_ennemy_stat();
 extern int AI(int);
 extern int ennemy_turn(int);
+
 
 
 

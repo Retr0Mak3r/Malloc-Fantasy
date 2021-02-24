@@ -51,6 +51,7 @@ void drawGame(int state){
     }
 
     if (state==5 && update==6){
+        printf("draw affichage score \n");
         char ***allScores=NULL;
         update=1;
 
@@ -64,7 +65,7 @@ void drawGame(int state){
         addText(40,color2, text, 100, 100);
 
         allScores = fetchScorePlayer();
-        //printf("test score %s",allScores[0][0]);
+
         for(int i=0;i<10;i++)
         {
             text=allScores[i][0];

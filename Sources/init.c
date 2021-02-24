@@ -106,6 +106,7 @@ void updateScorePlayer(int score){
     printf("%s\n",request);
     mysql_query(connexion, request);
     free(request);
+    printf("Update score ok");
 }
 
 char*** fetchScorePlayer(){
@@ -134,8 +135,9 @@ char*** fetchScorePlayer(){
         strcpy(returnScore[i][1],rowScore[1]);
     }
 
-    return returnScore;
     free(request);
+    printf("fonction retun  score ok");
+    return returnScore;
 }
 
 void setBackground(char *imgpath){
