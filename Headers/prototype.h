@@ -3,7 +3,6 @@
  ****************************************************** */
 
 #include "structs.h"
-
 #include <SDL.h>
 
 /* all fonctions */
