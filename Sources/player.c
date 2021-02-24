@@ -5,6 +5,7 @@ int class = 0;
 extern int state;
 extern int update;
 player_stat player;
+extern char *characterimg;
 
 int character_choice(){
     int choice = 0;

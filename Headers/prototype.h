@@ -20,7 +20,7 @@ extern int character_choice();
 extern player_stat init_stat(int);
 extern ennemy_stat init_ennemy_stat();
 extern int AI(int);
-extern int ennemy_action(int);
+extern int ennemy_turn(int);
 
 
 
