@@ -2,7 +2,7 @@
  *                   struct of game                     *
  ****************************************************** */
 
-//#include "structs.h"
+#include "structs.h"
 
 #include <SDL.h>
 
