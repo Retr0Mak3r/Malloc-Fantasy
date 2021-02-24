@@ -7,6 +7,8 @@
 #include <SDL.h>
 
 /* all fonctions */
+
+
 extern void init();
 extern int closeGame();
 extern void drawGame(int);
