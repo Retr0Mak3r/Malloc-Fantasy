@@ -18,3 +18,4 @@ extern void addText(int size, SDL_Color color, char *text, int x, int y);
 
 
 
+
