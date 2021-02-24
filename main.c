@@ -39,14 +39,7 @@ int main(int argc,char *argv[])
 
 
         SDL_WaitEvent(&touche);
-        if (state==1)
-        {
 
-        }
-        if (state==2)
-        {
-
-        }
         if (state==3 && update==2)
         {
             update=1;
@@ -56,12 +49,10 @@ int main(int argc,char *argv[])
         {
             printf("4- Lancement du jeu \n");
             update=1;
+
             updateScorePlayer(1000);
-            state=5;
-        }
-        if (state==5)
-        {
-            printf("5- affichage des scores \n");
+            state = 5;
+            update =6;
         }
 
         if (state==6)
@@ -84,11 +75,17 @@ int main(int argc,char *argv[])
                         {
                             state=3;
                             update=2;
+                        }
+                        if (state==5)
+                        {
+                            state=2;
+                            update=1;
                         } break;
                     case SDLK_2:
                         if (state==2)
                         {
                             state=5;
+                            update=6;
                         } break;
                     case SDLK_3:
                         if (state==2)

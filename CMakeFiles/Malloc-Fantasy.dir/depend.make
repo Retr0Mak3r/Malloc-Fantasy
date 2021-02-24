@@ -6,6 +6,7 @@ CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj: Headers/SDL/SDL_locale.h
 CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj: Headers/SDL/SDL_misc.h
 CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj: Headers/defs.h
 CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj: Headers/prototype.h
+CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj: Headers/structs.h
 CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj: Sources/draw.c
 CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj: C:/msys64/mingw64/include/SDL2/SDL.h
 CMakeFiles/Malloc-Fantasy.dir/Sources/draw.c.obj: C:/msys64/mingw64/include/SDL2/SDL_assert.h
@@ -137,6 +138,7 @@ CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj: Headers/SDL/SDL_locale.h
 CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj: Headers/SDL/SDL_misc.h
 CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj: Headers/defs.h
 CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj: Headers/prototype.h
+CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj: Headers/structs.h
 CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj: Sources/player.c
 CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj: C:/msys64/mingw64/include/SDL2/SDL.h
 CMakeFiles/Malloc-Fantasy.dir/Sources/player.c.obj: C:/msys64/mingw64/include/SDL2/SDL_assert.h
@@ -203,6 +205,7 @@ CMakeFiles/Malloc-Fantasy.dir/main.c.obj: Headers/SDL/SDL_locale.h
 CMakeFiles/Malloc-Fantasy.dir/main.c.obj: Headers/SDL/SDL_misc.h
 CMakeFiles/Malloc-Fantasy.dir/main.c.obj: Headers/defs.h
 CMakeFiles/Malloc-Fantasy.dir/main.c.obj: Headers/prototype.h
+CMakeFiles/Malloc-Fantasy.dir/main.c.obj: Headers/structs.h
 CMakeFiles/Malloc-Fantasy.dir/main.c.obj: main.c
 CMakeFiles/Malloc-Fantasy.dir/main.c.obj: C:/msys64/mingw64/include/SDL2/SDL.h
 CMakeFiles/Malloc-Fantasy.dir/main.c.obj: C:/msys64/mingw64/include/SDL2/SDL_assert.h

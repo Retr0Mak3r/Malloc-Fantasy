@@ -6,6 +6,7 @@ extern SDL_Surface *surface;
 extern SDL_Surface *texte;
 extern SDL_Surface *image;
 extern TTF_Font *police;
+extern int update;
 
 
 
@@ -48,6 +49,35 @@ void drawGame(int state){
         addText(15,color, text, 500, 990);
 
     }
+
+    if (state==5 && update==6){
+        char ***allScores=NULL;
+        update=1;
+
+        imgpath ="../bin/graphics/score.bmp";
+        setBackground(imgpath);
+
+        SDL_Color color = {255, 255, 255};
+        SDL_Color color2 = {180, 180, 180};
+
+        text="TOP 10 des Scores";
+        addText(40,color2, text, 100, 100);
+
+        allScores = fetchScorePlayer();
+        //printf("test score %s",allScores[0][0]);
+        for(int i=0;i<10;i++)
+        {
+            text=allScores[i][0];
+            addText(25,color2, text, 160, 180+i*35);
+
+            text=allScores[i][1];
+            addText(25,color2, text, 290, 180+i*35);
+        }
+        text="Pressez 1 pour retourner au menu";
+        addText(20,color, text, 930, 985);
+
+    }
+
 }
 
 
