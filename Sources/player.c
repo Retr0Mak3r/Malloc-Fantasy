@@ -1,9 +1,29 @@
 #include "../Headers/defs.h"
 #include "../Headers/prototype.h"
 extern char *pseudoname;
-int class;
+int class = 0;
 extern int state;
 extern int update;
+player_stat player;
+
+int character_choice(){
+    int choice = 0;
+    printf("Quel personnage voulez-vous jouer :\n1 : guerrier\n2 :  mage\n");
+    scanf("%d", &choice);
+    switch (choice) {
+        case 1:
+            printf("Vous avez choisi guerrier ? Ses stats : \n attaque : 50 \n defense : 100 \n mana : 25");
+            break;
+        case 2:
+            printf("Vous avez choisi mage ? Ses stats : \n attaque : 25 \n defense : 25 \n mana : 300");
+            break;
+        default:
+            printf("Choix impossible \n");
+            character_choice();
+            break;
+    }
+    return choice;
+}
 
 int createPlayer()
 {
@@ -29,15 +49,13 @@ int createPlayer()
     free(tmp);
     printf("le nom est %s \n", pseudoname);
 
-    printf("choisissez votre classe \n");
-    printf("tapez 1 pour magicien \n");
-    printf("tapez 2 pour epeiste \n");
-    class=0;
-    while(class!=1 && class!=2){
-        scanf("%d", &class);
-    }
 
-    printf("ta class est %d \n", class);
+    class = character_choice();
+   player = init_stat(class);
+    init_ennemy_stat();
+
+    printf("\ntes stats : vie %d \n attaque : %d \n défense : %d \n mana : %d \n degat magique : %d \n ", player.life,player.attack,player.defense,player.mana,player.magic);
+
 
     addPlayer(pseudoname);
 
