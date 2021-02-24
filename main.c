@@ -51,8 +51,7 @@ int main(int argc,char *argv[])
             update=1;
 
             updateScorePlayer(1000);
-            state = 5;
-            update = 6;
+            state = 1;
             printf("state 4 completed \n");
         }
 
@@ -101,8 +100,6 @@ int main(int argc,char *argv[])
 
         }
     }
-
-
 
     exit(0);
 }
