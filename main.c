@@ -52,7 +52,7 @@ int main(int argc,char *argv[])
 
             updateScorePlayer(1000);
             state = 1;
-            printf("state 4 completed \n");
+          //  printf("state 4 completed \n");
         }
 
         if (state==6)
