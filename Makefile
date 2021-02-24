@@ -66,10 +66,10 @@ RM = C:\msys64\mingw64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\gallo_umchrss\Desktop\Projets\projet C"
+CMAKE_SOURCE_DIR = C:\Users\mai_k\CLionProjects\Malloc-Fantasy
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\gallo_umchrss\Desktop\Projets\projet C"
+CMAKE_BINARY_DIR = C:\Users\mai_k\CLionProjects\Malloc-Fantasy
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -98,9 +98,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gallo_umchrss\Desktop\Projets\projet C\CMakeFiles" "C:\Users\gallo_umchrss\Desktop\Projets\projet C\\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mai_k\CLionProjects\Malloc-Fantasy\CMakeFiles C:\Users\mai_k\CLionProjects\Malloc-Fantasy\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\gallo_umchrss\Desktop\Projets\projet C\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mai_k\CLionProjects\Malloc-Fantasy\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
