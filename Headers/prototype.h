@@ -13,7 +13,7 @@ extern void drawGame(int);
 extern int createPlayer();
 extern void setBackground(char*);
 extern void addText(int size, SDL_Color color, char *text, int x, int y);
-extern void fMysql(void);
+
 
 
 
