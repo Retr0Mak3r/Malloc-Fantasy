@@ -51,7 +51,7 @@ int createPlayer()
 
 
     class = character_choice();
-   player = init_stat(class);
+    player = init_stat(class);
     init_ennemy_stat();
 
     printf("\ntes stats : vie %d \n attaque : %d \n défense : %d \n mana : %d \n degat magique : %d \n ", player.life,player.attack,player.defense,player.mana,player.magic);

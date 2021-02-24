@@ -118,6 +118,18 @@ SDL.h
 
 C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Headers/structs.h
 
+C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Sources/draw.c
+../Headers/defs.h
+C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Headers/defs.h
+../Headers/prototype.h
+C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Headers/prototype.h
+
+C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Sources/player.c
+../Headers/defs.h
+C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Headers/defs.h
+../Headers/prototype.h
+C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Headers/prototype.h
+
 C:/Users/mai_k/CLionProjects/Malloc-Fantasy/main.c
 Headers/prototype.h
 C:/Users/mai_k/CLionProjects/Malloc-Fantasy/Headers/prototype.h
