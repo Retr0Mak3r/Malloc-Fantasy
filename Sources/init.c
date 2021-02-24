@@ -3,7 +3,7 @@ FILE pointer_file;
 SDL_Window *window;
 SDL_Renderer *renderer;
 SDL_Texture *texture;
-SDL_Surface *surface, *image, *texte;
+SDL_Surface *surface, *image, *texte, *chara_design;
 TTF_Font *police;
 MYSQL *connexion;
 char *pseudoname;
@@ -15,6 +15,7 @@ void init(){
     renderer = NULL;
     texture = NULL;
     surface = NULL;
+    chara_design = NULL;
     texte = NULL;
     image = NULL;
     statut = EXIT_FAILURE;
@@ -63,6 +64,14 @@ void init(){
         fprintf(stderr, "Erreur SDL_CreateRGBSurface : %s", SDL_GetError());
     }   else{
         printf("Creation de la surface (renderer) ok \n");
+    }
+    chara_design = SDL_CreateRGBSurface(0, 1280, 1024, 32, 0, 0, 0, 0);
+    if(NULL == chara_design)
+    {
+        printf("5- echec de la creation du personnage (renderer) \n");
+        fprintf(stderr, "Erreur SDL_CreateRGBSurface : %s", SDL_GetError());
+    }   else{
+        printf("Creation du personnage (renderer) ok \n");
     }
     TTF_Init();
     if(TTF_Init() == -1)
@@ -146,6 +155,23 @@ void setBackground(char *imgpath){
     image = SDL_LoadBMP(imgpath);
     texture = SDL_CreateTextureFromSurface(renderer, image);
     SDL_RenderCopy(renderer, texture, NULL, NULL);
+    SDL_RenderPresent(renderer);
+}
+void set_character(int x, int y){
+    char *imgpath = "../bin/graphics/character.bmp";
+    SDL_Rect position;
+   // SDL_RenderClear(renderer);
+    chara_design = SDL_LoadBMP(imgpath);
+  //  texture = SDL_CreateTextureFromSurface(renderer, image);
+   // SDL_RenderCopy(renderer, texture, NULL, NULL);
+   // SDL_RenderPresent(renderer);
+    position.x=x;
+    position.y=y;
+   // position.w = 100;
+   // position.h = 100;
+    SDL_BlitSurface(chara_design,NULL,surface,&position);
+    texture= SDL_CreateTextureFromSurface(renderer,chara_design);
+    SDL_RenderCopy(renderer, texture, NULL, &position);
     SDL_RenderPresent(renderer);
 }
 

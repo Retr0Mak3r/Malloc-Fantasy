@@ -15,10 +15,11 @@ int player_turn(int ennemy_choice){
     int action = 0;
     int temp = 0;
     int mana = 0;
+    SDL_Color color = {255, 255, 255};
     player_stat player;
-    ennemy_stat *ennemy = malloc(sizeof(ennemy));
-   // printf("Que voulez-vous faire ? ");
-    //scanf("%d",&action);
+    ennemy_stat *ennemy;
+   addText(15,color,"Que voulez-vous faire ? ",500,990);
+    scanf("%d",&action);
     switch (action) {
         case 1:
             if (ennemy_choice == 2){
