@@ -17,6 +17,7 @@ extern void battle();
 extern void addText(int size, SDL_Color color, char *text, int x, int y);
 extern void addPlayer(char*);
 extern void updateScorePlayer(int);
+extern void set_background_battle(char *);
 extern void set_character();
 extern char*** fetchScorePlayer();
 extern int player_turn (int);

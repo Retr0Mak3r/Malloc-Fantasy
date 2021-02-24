@@ -60,6 +60,7 @@ int main(int argc,char *argv[])
         }
         if (state == 7){
                 battle();
+              // printf("DEBUG ::::::::::::::::::::::::::: COMBAT :::::::::::::::::::::::::");
         }
         switch (touche.type)
         {
@@ -97,6 +98,9 @@ int main(int argc,char *argv[])
                     case SDLK_ESCAPE:
                         isRunning = false;
                         state=6;
+                        break;
+                    case SDLK_SPACE:
+                        if (state== 4) state = 7;
                         break;
                 }break;
 
