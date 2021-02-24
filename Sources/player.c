@@ -5,26 +5,9 @@ int class = 0;
 extern int state;
 extern int update;
 player_stat player;
-extern char *characterimg;
+extern SDL_Renderer *renderer;
+//extern char *characterimg;
 
-int character_choice(){
-    int choice = 0;
-    printf("Quel personnage voulez-vous jouer :\n1 : guerrier\n2 :  mage\n");
-    scanf("%d", &choice);
-    switch (choice) {
-        case 1:
-            printf("Vous avez choisi guerrier ? Ses stats : \n attaque : 50 \n defense : 100 \n mana : 25");
-            break;
-        case 2:
-            printf("Vous avez choisi mage ? Ses stats : \n attaque : 25 \n defense : 25 \n mana : 300");
-            break;
-        default:
-            printf("Choix impossible \n");
-            character_choice();
-            break;
-    }
-    return choice;
-}
 
 int createPlayer()
 {
@@ -32,6 +15,7 @@ int createPlayer()
     pseudoname = malloc(sizeof(char)*11);
     char *tmp = malloc(sizeof(char)*200);
     int lenght;
+    //int choice = 0;
     if(pseudoname == NULL)
     {
         printf("ca a foirée..\n");
@@ -49,18 +33,28 @@ int createPlayer()
     strcpy(pseudoname, tmp);
     free(tmp);
     printf("le nom est %s \n", pseudoname);
+    addPlayer(pseudoname);
 
+    //----------- perso -----------
+    printf("selectionner votre personnage guerrier(1) ou mage(2) \n");
+    scanf("%d", &class);
 
-    class = character_choice();
+    while(class !=1 && class !=2)
+    {
+        printf("selectionner votre personnage guerrier(1) ou mage(2) \n");
+        scanf("%d", &class);
+    }
+    if(class==1)
+   {
+       printf("Vous avez choisi guerrier ? Ses stats : \n attaque : 50 \n defense : 100 \n mana : 25");
+   }else{
+       printf("Vous avez choisi mage ? Ses stats : \n attaque : 25 \n defense : 25 \n mana : 300");
+   }
+
     player = init_stat(class);
     init_ennemy_stat();
-
-    printf("\ntes stats : vie %d \n attaque : %d \n défense : %d \n mana : %d \n degat magique : %d \n ", player.life,player.attack,player.defense,player.mana,player.magic);
-
-
-    addPlayer(pseudoname);
+    //printf("\nVos statistiques : vie %d \n attaque : %d \n défense : %d \n mana : %d \n degat magique : %d \n ", player.life,player.attack,player.defense,player.mana,player.magic);
 
     state=4;
     update=3;
-    printf("la valeur de update est %d \n", update);
 }

@@ -1,4 +1,5 @@
 #include "../Headers/defs.h"
+FILE pointer_file;
 SDL_Window *window;
 SDL_Renderer *renderer;
 SDL_Texture *texture;
