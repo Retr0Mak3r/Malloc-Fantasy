@@ -26,6 +26,7 @@ void drawGame(int state){
 
         text="Groupe 2 TALLA GALLOT 2A3 24/02/2021 ";
         addText(15,color2, text, 500, 990);
+
     }
     if(state==2)
     {

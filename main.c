@@ -42,17 +42,17 @@ int main(int argc,char *argv[])
 
         if (state==3 && update==2)
         {
+            Mix_HaltMusic();
             update=1;
             createPlayer();
         }
         if (state==4 && update==3)
         {
-            printf("4- Lancement du jeu \n");
             update=1;
 
-            updateScorePlayer(1000);
+            updateScorePlayer(1947);
             state = 1;
-            printf("state 4 completed \n");
+
         }
 
         if (state==6)

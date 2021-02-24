@@ -4,6 +4,7 @@ SDL_Window *window;
 SDL_Renderer *renderer;
 SDL_Texture *texture;
 SDL_Surface *surface, *image, *texte;
+Mix_Music *music;
 TTF_Font *police;
 MYSQL *connexion;
 char *pseudoname;
@@ -70,6 +71,17 @@ void init(){
     }   else{
         fputs("\n 6- Success / TTF_init ok", backlog);
     }
+    if(Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 1024) == -1) //Initialisation de l'API Mixer
+    {
+        fprintf(backlog,"%s", Mix_GetError());
+    }   else{
+        fputs("\n 7- Success / Ini Audio ok", backlog);
+    }
+
+    music = Mix_LoadMUS("../bin/Sons/ffx.mp3");
+    Mix_PlayMusic(music, 1);
+    Mix_VolumeMusic(MIX_MAX_VOLUME / 10);
+    
 
     // ---------------------- initialisation de mysql ----------------------
 
@@ -86,7 +98,7 @@ void init(){
     if(!(mysql_real_connect(connexion,host,user,password,dbname,port,unix_socket,flag))){
         fprintf(backlog, "\n Error mysql: %s\n",mysql_error(connexion));
     }   else{
-        fputs("\n 7- Success / connexion a la base de donnees -> success", backlog);
+        fputs("\n 8- Success / connexion a la base de donnees -> success", backlog);
     }
 }
 
@@ -169,6 +181,8 @@ void addText(int size, SDL_Color color, char *text, int x, int y){
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     TTF_CloseFont(police);
+    Mix_CloseAudio();
+    Mix_FreeMusic(music);
     TTF_Quit();
     fclose(backlog);
     SDL_Quit();
