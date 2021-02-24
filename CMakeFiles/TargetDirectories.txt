@@ -1,0 +1,3 @@
+C:/Users/mai_k/CLionProjects/Malloc-Fantasy/CMakeFiles/rebuild_cache.dir
+C:/Users/mai_k/CLionProjects/Malloc-Fantasy/CMakeFiles/edit_cache.dir
+C:/Users/mai_k/CLionProjects/Malloc-Fantasy/CMakeFiles/Malloc-Fantasy.dir

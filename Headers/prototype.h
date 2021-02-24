@@ -2,7 +2,7 @@
  *                   struct of game                     *
  ****************************************************** */
 
-//#include "structs.h"
+#include "structs.h"
 
 #include <SDL.h>
 
@@ -14,6 +14,7 @@ extern int createPlayer();
 extern void setBackground(char*);
 extern void addText(int size, SDL_Color color, char *text, int x, int y);
 extern void addPlayer(char*);
+extern void updateScorePlayer(int);
 
 
 

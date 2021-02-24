@@ -89,13 +89,20 @@ void init(){
     }   else{
         printf("connexion a la base de donnees -> success \n");
     }
-
 }
 
 void addPlayer(char *pseudo){
-    char *request = malloc(sizeof(char)*256);
+    char *request = malloc(sizeof(char)*255);
 
     sprintf(request, "INSERT INTO players(pseudo) VALUES ('%s');",pseudo);
+    printf("%s\n",request);
+    mysql_query(connexion, request);
+    free(request);
+}
+
+void updateScorePlayer(int score){
+    char *request = malloc(sizeof(char)*255);
+    sprintf(request, "UPDATE players SET score = '%d' ORDER BY id desc limit 1;",score);
     printf("%s\n",request);
     mysql_query(connexion, request);
     free(request);
