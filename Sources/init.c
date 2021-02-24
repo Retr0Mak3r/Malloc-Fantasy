@@ -7,8 +7,6 @@ TTF_Font *police;
 int statut;
 
 
-
-
 void init(){
     window = NULL;
     renderer = NULL;
@@ -54,7 +52,7 @@ void init(){
     }   else{
         printf("4- Creation de la texture ok \n");
     }
-    surface = SDL_CreateRGBSurface(0, 300, 200, 32, 0, 0, 0, 0);
+    surface = SDL_CreateRGBSurface(0, 1280, 1024, 32, 0, 0, 0, 0);
     if(NULL == surface)
     {
         printf("5- echec de la creation de la surface (renderer) \n");
@@ -70,17 +68,47 @@ void init(){
     }   else{
         printf("6- TTF_init ok \n");
     }
+
+    // ---------------------- initialisation de mysql ----------------------
+
+    char *host = "localhost";
+    char *user = "root";
+    char *password = "root";
+    char *dbname = "malloc_fantasy";
+    unsigned int port = 0;
+    char *unix_socket = NULL;
+    unsigned int flag = 0;
+
     MYSQL *connexion = mysql_init(NULL);
-    if(connexion== NULL)
-    {
-        printf("Mysql init echec \n");
-    }else
-    {
-        printf("7- Mysql init success \n");
+
+    if(!(mysql_real_connect(connexion,host,user,password,dbname,port,unix_socket,flag))){
+        printf( "Error mysql: %s\n",mysql_error(connexion));
+    }   else{
+        printf("connexion a la base de donnees -> success \n");
     }
 }
 
-//------------------ end ---------------------
+void setBackground(char *imgpath){
+    SDL_RenderClear(renderer);
+    image = SDL_LoadBMP(imgpath);
+    texture = SDL_CreateTextureFromSurface(renderer, image);
+    SDL_RenderCopy(renderer, texture, NULL, NULL);
+    SDL_RenderPresent(renderer);
+}
+
+void addText(int size, SDL_Color color, char *text, int x, int y){
+    SDL_Rect position;
+    police = TTF_OpenFont("../bin/fonts/arial.ttf", size);
+    texte = TTF_RenderText_Blended(police, text, color);
+    position.x=x;
+    position.y=y;
+    SDL_BlitSurface(texte,NULL,surface,&position);
+    texture= SDL_CreateTextureFromSurface(renderer,texte);
+    SDL_RenderCopy(renderer, texture, NULL, &position);
+
+    SDL_RenderPresent(renderer);
+}
+
 
     int statut = EXIT_SUCCESS;
     int closeGame(){

@@ -19,6 +19,7 @@ int main(int argc,char *argv[])
     SDL_Event touche;
     bool isRunning = true;
     int state = 1;
+    int update =1;
 
     /* ***************************** *
      * =========== State =========== *
@@ -35,21 +36,20 @@ int main(int argc,char *argv[])
     {
         drawGame(state);
 
+
         SDL_WaitEvent(&touche);
         if (state==1)
         {
-            printf("1- Start \n");
+
         }
         if (state==2)
         {
-            printf("2- Menu \n");
-            //1 new game
-            //2 score
-            //3 quit
+
         }
-        if (state==3)
+        if (state==3 && update!=1)
         {
-            printf("3- Creation du personnage \n");
+            createPlayer();
+            update=1;
         }
         if (state==4)
         {
@@ -79,6 +79,7 @@ int main(int argc,char *argv[])
                         if (state==2)
                         {
                             state=3;
+                            update++;
                         } break;
                     case SDLK_2:
                         if (state==2)
