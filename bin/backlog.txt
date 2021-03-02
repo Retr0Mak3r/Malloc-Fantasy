@@ -183,3 +183,35 @@ UPDATE players SET score = '5847' ORDER BY id desc limit 1;
  8- Success / connexion a la base de donnees -> success
  select pseudo, score from players order by score desc limit 10;INSERT INTO players(pseudo) VALUES ('bstark'); 
 UPDATE players SET score = '1947' ORDER BY id desc limit 1; 
+
+ ============== NEW GAME ==============
+ 1- Success / Initialisation SDL + SDL_INIT_VIDEO 
+
+ 2- Success / Creation de la fenetre ok
+ 3- Success / Creation du cadre (renderer) ok
+ 4- Success / Creation de la texture ok
+ 5- Success / Creation de la surface (renderer) ok
+ 6- Success / TTF_init ok
+ 7- Success / Ini Audio ok
+ 8- Success / connexion a la base de donnees -> success
+ select pseudo, score from players order by score desc limit 10;
+ ============== NEW GAME ==============
+ 1- Success / Initialisation SDL + SDL_INIT_VIDEO 
+
+ 2- Success / Creation de la fenetre ok
+ 3- Success / Creation du cadre (renderer) ok
+ 4- Success / Creation de la texture ok
+ 5- Success / Creation de la surface (renderer) ok
+ 6- Success / TTF_init ok
+ 7- Success / Ini Audio ok
+ 8- Success / connexion a la base de donnees -> success
+ ============== NEW GAME ==============
+ 1- Success / Initialisation SDL + SDL_INIT_VIDEO 
+
+ 2- Success / Creation de la fenetre ok
+ 3- Success / Creation du cadre (renderer) ok
+ 4- Success / Creation de la texture ok
+ 5- Success / Creation de la surface (renderer) ok
+ 6- Success / TTF_init ok
+ 7- Success / Ini Audio ok
+ 8- Success / connexion a la base de donnees -> success

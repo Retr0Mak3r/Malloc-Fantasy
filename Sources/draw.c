@@ -52,10 +52,10 @@ void drawGame(int state){
     }
     if (state ==4 && update == 3){
         update = 2;
-        imgpath ="../bin/graphics/map.bmp";
+        //imgpath ="../bin/graphics/map.bmp";
         //printf("DEBUG::::::::::::::::::::::::::::::TEST:::::::::::::::::::");
-        setBackground(imgpath);
-        set_character(600,600);
+       // setBackground(imgpath);
+        //set_character(600,600);
         //SDL_RenderClear(renderer);
     }
 
